@@ -3,13 +3,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-brown: #bd5003;
+  --brand-dark-brown: #aa0503;
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+} */
+
+@theme {
+  --color-brown: #bd5003;
+  --color-dark-brown: #aa0503;
 }
 
 @media (prefers-color-scheme: dark) {
