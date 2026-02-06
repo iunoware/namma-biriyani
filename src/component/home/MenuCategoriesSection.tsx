@@ -1,6 +1,6 @@
 "use client";
-
-import React from "react";
+import Image from "next/image";
+import React, { useState } from "react";
 import Link from "next/link";
 
 const categories = [
@@ -8,99 +8,90 @@ const categories = [
     title: "Biriyanis",
     hint: "Signature seeraga samba & basmati specials",
     href: "/menu#biriyanis",
-    isPrimary: true,
+    image: "/images/cuisine_spread_1770293825629.png",
   },
   {
     title: "Chinese",
     hint: "Wok-fried classics & appetizers",
     href: "/menu#chinese",
-    isPrimary: true,
+    image: "/images/cuisine_montage_premium_1770293849118.png",
   },
   {
     title: "Tandoori & Tikkas",
     hint: "Clay-oven roasted smoky delights",
     href: "/menu#tandoori",
-    isPrimary: true,
+    image: "/images/indian_cuisine_spread_1770293924843.png",
   },
   {
     title: "Parottas & South Indian",
     hint: "Flaky parottas & regional favorites",
     href: "/menu#south-indian",
-    isPrimary: true,
-  },
-  {
-    title: "North Indian Curries",
-    hint: "Rich gravies & slow-cooked gems",
-    href: "/menu#north-indian",
-    isPrimary: true,
+    image: "/images/indian_food_spread_premium_1770293876752.png",
   },
   {
     title: "Bucket Biriyanis",
     hint: "Perfect for family gatherings",
     href: "/menu#buckets",
-    isPrimary: true,
+    image: "/images/restaurant_spread_premium_1770293901185.png",
   },
 ];
 
 const MenuCategoriesSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
-    <section className="relative w-full bg-white py-20 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        {/* Section Heading */}
-        <div className="mb-12 lg:mb-20 text-center lg:text-left">
+    <section className="py-10">
+      <div className="mx-auto flex items-center justify-center max-w-7xl px-6 lg:px-10">
+        <div className="mb-12 lg:mb-20 flex items-center justify-center flex-col text-center lg:text-left">
           <h2 className="font-heading text-4xl font-bold tracking-tight text-zinc-900 md:text-5xl">
             Explore <span className="text-brown">Our Menu</span>
           </h2>
-          <div className="mt-4 h-1 w-20 bg-brown/20 mx-auto lg:mx-0 rounded-full"></div>
+          <div className="mt-4 h-1 w-40 bg-brown/20 mx-auto lg:mx-0 rounded-full"></div>
         </div>
+      </div>
 
-        {/* Categories Grid */}
-        <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4 lg:grid-rows-2">
-          {categories.map((category, index) => (
-            <Link
+      <div className="flex gap-4 w-full px-6">
+        {categories.map((category, index) => {
+          const isActive = activeIndex === index;
+
+          return (
+            <div
               key={index}
-              href={category.href}
-              className={`group relative flex flex-col justify-end overflow-hidden rounded-2xl border border-zinc-100 bg-[#FAFAFA] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brown/30 hover:shadow-xl hover:shadow-brown/5 focus:outline-none focus:ring-2 focus:ring-brown/50 ${
-                category.isPrimary
-                  ? "col-span-2 row-span-1 lg:row-span-2 min-h-[160px] lg:min-h-full bg-linear-to-br from-[#FFF9F5] to-white"
-                  : "aspect-square lg:aspect-auto min-h-[140px]"
-              }`}
+              onMouseEnter={() => setActiveIndex(index)}
+              onMouseLeave={() => setActiveIndex(0)}
+              style={{
+                backgroundImage: `url(${category.image})`,
+                flex: isActive ? 3 : 1,
+              }}
+              className={`
+                relative group h-125 overflow-hidden
+                transition-all duration-700 ease-in-out
+                bg-cover bg-center rounded-2xl
+                flex flex-col justify-end p-6 cursor-pointer
+              `}
             >
-              {/* Subtle background decoration for primary tile */}
-              {category.isPrimary && (
-                <div className="absolute top-0 right-0 h-32 w-32 translate-x-1/4 -translate-y-1/4 rounded-full bg-brown/5 transition-transform duration-700 group-hover:scale-150" />
-              )}
+              {/* overlay */}
+              <div className="absolute inset-0 bg-black/40 transition-opacity duration-500" />
 
-              <div className="relative z-10">
-                <h3
-                  className={`font-heading text-xl font-bold text-zinc-900 transition-colors duration-300 group-hover:text-brown md:text-2xl ${category.isPrimary ? "lg:text-4xl" : ""}`}
-                >
-                  {category.title}
-                </h3>
-                <p className="font-body mt-2 text-xs font-medium uppercase tracking-widest text-zinc-500 md:text-sm">
-                  {category.hint}
-                </p>
-              </div>
+              {/* content */}
+              <h2
+                className={`relative z-10 text-white font-semibold transition-all duration-500
+              ${isActive ? "text-4xl" : "text-2xl"}
+            `}
+              >
+                {category.title}
+              </h2>
 
-              {/* Action Indicator */}
-              <div className="absolute right-6 bottom-6 translate-x-4 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-brown"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </div>
-            </Link>
-          ))}
-        </div>
+              <p
+                className={`relative z-10 mt-2 max-w-sm text-white/80 transition-all duration-500
+              ${isActive ? "opacity-100 text-lg" : "opacity-0 text-sm"}
+            `}
+              >
+                {category.hint}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

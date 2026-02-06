@@ -102,7 +102,7 @@ export default function Interiors() {
 
             <div className="w-12 h-px bg-brand-red mx-auto mb-8"></div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-sans! text-black leading-tight mb-10">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-heading text-black leading-tight mb-10">
               The Biriyani We’re <br />
               <span className="italic text-dark-brown">Known For</span>
             </h2>
@@ -115,7 +115,7 @@ export default function Interiors() {
             </p>
 
             <div className="relative group inline-block">
-              <button className="font-sans cursor-pointer text-[13px] font-semibold tracking-widest uppercase text-black group-hover:text-brown transition-colors duration-300">
+              <button className=" font-heading cursor-pointer text-[13px] font-semibold tracking-widest uppercase text-black group-hover:text-brown transition-colors duration-300">
                 View Biriyani Menu
               </button>
               <div className="absolute -bottom-1 left-0 w-full h-px bg-brown group-hover:bg-dark-brown scale-x-100 group-hover:scale-x-110 transition-all duration-300"></div>

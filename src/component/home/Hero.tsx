@@ -120,7 +120,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="absolute inset-0 left-10 top-25 flex flex-col items-start justify-start">
-        <div className="w-fit h-fit flex-col flex items-center justify-center">
+        {/* <div className="w-fit h-fit flex-col flex items-center justify-center">
           <svg
             className="h-40 w-auto"
             viewBox="0 0 112 59"
@@ -187,7 +187,7 @@ const Hero = () => {
           <p className="text-md font-heading text-white/90 pt-2 tracking-wide">
             Authentic Traditional Biryani
           </p>
-        </div>
+        </div> */}
       </div>
       <div className="absolute inset-0 right-10 bottom-16 flex flex-col items-end justify-end">
         <p className="max-w-md text-white/80 text-xl font-body leading-relaxed text-right">

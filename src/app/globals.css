@@ -13,8 +13,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-heading);
-  --font-serif: var(--font-bon-vivant);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body), sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,12 +27,12 @@
 body {
   background: white;
   color: #171717;
-  font-family: var(--font-serif), sans-serif;
+  font-family: var(--font-body), sans-serif;
 }
 
 h1,
 h2,
 h3,
 .hero-heading {
-  font-family: var(--font-sans), serif;
+  font-family: var(--font-heading), serif;
 }
