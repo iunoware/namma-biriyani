@@ -5,12 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
+import OrderModal from "@/component/shared/OrderModal";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Menu", href: "/menu" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "home" },
+  { name: "About", href: "about" },
+  { name: "Menu", href: "menu" },
+  { name: "Contact", href: "contact" },
 ];
 
 export default function Navbar() {
@@ -27,6 +28,14 @@ export default function Navbar() {
   const burgerRef = useRef<HTMLButtonElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileLinksRef = useRef<(HTMLElement | null)[]>([]);
+  const [open, setOpen] = useState(false);
+
+  function smoothScroll(href: string) {
+    const section = document.getElementById(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -157,10 +166,11 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
-                <Link
+                <div
                   key={link.name}
-                  href={link.href}
-                  className={`group relative font-sans text-[15px] font-medium tracking-wide  ${
+                  // href={link.href}
+                  onClick={() => smoothScroll(link.href)}
+                  className={`group cursor-pointer relative font-sans text-[15px] font-medium tracking-wide  ${
                     isScrolled
                       ? "text-zinc-950"
                       : "text-white/90 hover:text-zinc-300"
@@ -172,17 +182,18 @@ export default function Navbar() {
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     } `}
                   />
-                </Link>
+                </div>
               );
             })}
           </div>
 
           {/* Far Right: CTA (Desktop) */}
           <div ref={ctaRef} className="hidden md:block">
-            <a
-              href="https://maps.app.goo.gl/jBX9HGtHyhLxGoj28"
-              target="_blank"
-              className={`group relative font-sans text-[15px] font-medium tracking-wide ${
+            <button
+              // href="https://maps.app.goo.gl/jBX9HGtHyhLxGoj28"
+              // target="_blank"
+              onClick={() => setOpen(true)}
+              className={`group relative cursor-pointer font-sans text-[15px] font-medium tracking-wide ${
                 isScrolled
                   ? "text-white/90 hover:text-zinc-300 bg-brown p-3 rounded-full "
                   : "text-white/90 hover:text-zinc-300 bg-brown p-3 rounded-full"
@@ -190,7 +201,7 @@ export default function Navbar() {
             >
               Order Now &rarr;
               <span className="absolute -bottom-1 left-0 h-[1.5px] w-0 bg-brand-red transition-all duration-300 ease-out group-hover:w-full" />
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button - Hamburger + Label */}
@@ -223,6 +234,7 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+      <OrderModal isOpen={open} onClose={() => setOpen(false)} />
 
       {/* Mobile Menu Overlay - */}
       <div
@@ -261,9 +273,9 @@ export default function Navbar() {
             }}
           >
             <a
-              href="https://maps.app.goo.gl/jBX9HGtHyhLxGoj28"
-              target="_blank"
-              onClick={toggleMenu}
+              // href="https://maps.app.goo.gl/jBX9HGtHyhLxGoj28"
+              // target="_blank"
+              onClick={() => setOpen(true)}
               className="group relative font-sans text-sm font-medium tracking-[0.2em] text-black uppercase"
             >
               Visit Us &rarr;

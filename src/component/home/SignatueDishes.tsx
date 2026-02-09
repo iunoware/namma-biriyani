@@ -81,7 +81,7 @@ export default function Interiors() {
           {/* Left Image - Sited lower for asymmetry */}
           <div
             ref={leftImageRef}
-            className="w-full rounded-2xl lg:w-1/4 h-100 lg:h-150 relative order-2 lg:order-1 lg:mt-24 shadow-2xl overflow-hidden group"
+            className="w-full rounded-2xl lg:w-2/6 h-100 lg:h-150 relative order-2 lg:order-1 lg:mt-24 shadow-2xl overflow-hidden group"
           >
             <Image
               src="/images/biryani-1.png"
@@ -125,7 +125,7 @@ export default function Interiors() {
           {/* Right Image - Sited higher for asymmetry */}
           <div
             ref={rightImageRef}
-            className="w-full rounded-2xl lg:w-1/4 h-100 lg:h-150 relative order-3 lg:mb-24 shadow-2xl overflow-hidden group"
+            className="w-full rounded-2xl lg:w-2/6 h-100 lg:h-150 relative order-3 lg:mb-24 shadow-2xl overflow-hidden group"
           >
             <Image
               src="/images/bucket.jfif"

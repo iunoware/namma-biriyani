@@ -34,20 +34,27 @@ const TestimonialsSection = () => {
         () => {
             if (!containerRef.current) return;
 
-            const elements = containerRef.current.children;
+            const elements = Array.from(containerRef.current.children);
 
-            gsap.from(elements, {
-                y: 40,
-                opacity: 0,
-                duration: 0.8,
-                stagger: 0.15,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top 85%",
-                    toggleActions: "play none none none",
+            gsap.fromTo(
+                elements,
+                {
+                    y: 40,
+                    opacity: 0,
                 },
-            });
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 85%",
+                        toggleActions: "play none none none",
+                    },
+                }
+            );
         },
         { scope: sectionRef }
     );

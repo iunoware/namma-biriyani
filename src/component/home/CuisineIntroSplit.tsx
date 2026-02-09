@@ -42,7 +42,7 @@ const CuisineIntroSplit = () => {
       ref={containerRef}
       className="relative w-full overflow-hidden bg-white py-20 lg:py-32"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div id="about" className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left Column: Text Content */}
           <div ref={textContentRef} className="flex flex-col items-start">

@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Source_Sans_3 } from "next/font/google";
+import {
+  Playfair_Display,
+  Source_Sans_3,
+  Marck_Script,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/shared/Navbar";
+import Footer from "@/component/shared/Footer";
 
 export const metadata: Metadata = {
   title: "Namma Biryani",
   description: "Best Biryani in Madurai",
+  icons: {
+    icon: {
+      // media: "(prefers-color-scheme: light)",
+      url: "/images/apple-touch-icon.png",
+      href: "/images/apple-touch-icon.png",
+    },
+  },
 };
 
 // Playfair Display – headings for a more premium look
@@ -21,8 +33,14 @@ const playfair = Playfair_Display({
 const sourceSans3 = Source_Sans_3({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  style: ["normal"],
   variable: "--font-body",
+  display: "swap",
+});
+
+const marckScript = Marck_Script({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-accent",
   display: "swap",
 });
 
@@ -34,10 +52,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${sourceSans3.variable} antialiased`}
+        className={`${playfair.variable} ${sourceSans3.variable} ${marckScript.variable} antialiased`}
       >
         <Navbar />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -41,7 +41,10 @@ const MenuCategoriesSection = () => {
 
   return (
     <section className="py-10">
-      <div className="mx-auto flex items-center justify-center max-w-7xl px-6 lg:px-10">
+      <div
+        id="menu"
+        className="mx-auto flex items-center justify-center max-w-7xl px-6 lg:px-10"
+      >
         <div className="mb-12 lg:mb-20 flex items-center justify-center flex-col text-center lg:text-left">
           <h2 className="font-heading text-4xl font-bold tracking-tight text-zinc-900 md:text-5xl">
             Explore <span className="text-brown">Our Menu</span>
@@ -50,7 +53,7 @@ const MenuCategoriesSection = () => {
         </div>
       </div>
 
-      <div className="flex gap-4 w-full px-6">
+      <div className="flex md:flex-row flex-col gap-4 w-full px-6">
         {categories.map((category, index) => {
           const isActive = activeIndex === index;
 

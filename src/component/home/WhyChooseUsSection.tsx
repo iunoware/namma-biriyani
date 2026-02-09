@@ -82,20 +82,27 @@ const WhyChooseUsSection = () => {
     () => {
       if (!containerRef.current) return;
 
-      const elements = containerRef.current.children;
+      const elements = Array.from(containerRef.current.children);
 
-      gsap.from(elements, {
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 85%",
-          toggleActions: "play none none none",
+      gsap.fromTo(
+        elements,
+        {
+          y: 60,
+          opacity: 0,
         },
-      });
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        },
+      );
     },
     { scope: sectionRef },
   );
@@ -103,11 +110,12 @@ const WhyChooseUsSection = () => {
   return (
     <section
       ref={sectionRef}
+      id="why-choose-us"
       className="py-20 md:py-32 bg-white overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
-        <div className="text-center mb-16 md:mb-24">
+        <div className="text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-zinc-900 mb-6">
             Why <span className="text-brown">Choose Us</span>
           </h2>
@@ -125,9 +133,9 @@ const WhyChooseUsSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col transition-all duration-200 hover:bg-brown/10 rounded-2xl p-10 h-fit items-center text-center ${index == 1 ? "md:translate-y-30!" : ""}`}
+              className={`flex flex-col transition-all duration-200 hover:bg-brown/5 rounded-2xl p-10 h-fit items-center text-center ${index === 1 ? "md:translate-y-24!" : ""}`}
             >
-              <div className="mb-8 mt-10 p-4 rounded-2xl bg-dark-brown/15">
+              <div className="mb-8 mt-10 p-4 rounded-2xl bg-dark-brown/10">
                 {feature.icon}
               </div>
               <h3 className="text-2xl font-heading font-bold text-zinc-900 mb-4">

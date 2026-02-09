@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import Image from "next/image";
+
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -95,12 +95,13 @@ const Hero = () => {
   return (
     <section
       ref={containerRef}
+      id="home"
       className="relative min-h-screen w-full bg-black overflow-hidden flex items-center justify-center"
     >
       <div className="relative w-full h-screen">
         <video
           ref={videoRef}
-          src="/videos/hero.mp4"
+          src="/videos/hero-1.mp4"
           muted
           playsInline
           preload="auto"
@@ -119,8 +120,8 @@ const Hero = () => {
           </span>
         </div>
       </div>
-      <div className="absolute inset-0 left-10 top-25 flex flex-col items-start justify-start">
-        {/* <div className="w-fit h-fit flex-col flex items-center justify-center">
+      {/* <div className="absolute inset-0 left-10 top-25 flex flex-col items-start justify-start">
+        <div className="w-fit h-fit flex-col flex items-center justify-center">
           <svg
             className="h-40 w-auto"
             viewBox="0 0 112 59"
@@ -187,10 +188,17 @@ const Hero = () => {
           <p className="text-md font-heading text-white/90 pt-2 tracking-wide">
             Authentic Traditional Biryani
           </p>
-        </div> */}
+        </div>
+      </div> */}
+      <div className="absolute inset-0 flex justify-center items-center">
+        <h1 className="text-[6rem] text-center leading-tight z-10 tracking-tighter font-bold text-white">
+          The Taste of <br />{" "}
+          <span className="text-dark-brown italic">Madurai</span>
+        </h1>
       </div>
+      <div className="absolute inset-0 bg-black/10"></div>
       <div className="absolute inset-0 right-10 bottom-16 flex flex-col items-end justify-end">
-        <p className="max-w-md text-white/80 text-xl font-body leading-relaxed text-right">
+        <p className="max-w-md z-10 text-white/80 text-lg font-body leading-relaxed text-right">
           Savor the rich heritage of handcrafted biryani, where every spice
           tells a story of tradition and fire.
         </p>

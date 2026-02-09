@@ -5,16 +5,19 @@
   --color-dark-brown: #aa0503;
   --font-heading: var(--font-heading), serif;
   --font-body: var(--font-body), sans-serif;
+  --font-accent: var(--font-accent), cursive;
 }
 
 :root {
   --font-heading: var(--font-heading);
   --font-body: var(--font-body), sans-serif;
+  --font-accent: var(--font-accent);
 }
 
 @theme inline {
   --font-heading: var(--font-heading);
   --font-body: var(--font-body), sans-serif;
+  --font-accent: var(--font-accent);
 }
 
 @media (prefers-color-scheme: dark) {
