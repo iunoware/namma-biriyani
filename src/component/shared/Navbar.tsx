@@ -140,9 +140,8 @@ export default function Navbar() {
     <>
       <nav
         ref={navRef}
-        className={`${
-          showNavbar ? "translate-y-0" : "-translate-y-full!"
-        } fixed top-0 z-50 w-full h-16 md:h-22 transition-all duration-300 ${isScrolled ? "bg-white shadow-sm" : "bg-transparent"}`}
+        className={`${showNavbar ? "translate-y-0" : "-translate-y-full!"
+          } fixed top-0 z-50 w-full h-16 md:h-22 transition-all duration-300 ${isScrolled ? "bg-white shadow-sm" : "bg-transparent"}`}
       >
         <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 md:px-10">
           {/* Left: Brand Name */}
@@ -170,17 +169,15 @@ export default function Navbar() {
                   key={link.name}
                   // href={link.href}
                   onClick={() => smoothScroll(link.href)}
-                  className={`group cursor-pointer relative font-sans text-[15px] font-medium tracking-wide  ${
-                    isScrolled
+                  className={`group cursor-pointer relative font-sans text-[15px] font-medium tracking-wide  ${isScrolled
                       ? "text-zinc-950"
                       : "text-white/90 hover:text-zinc-300"
-                  }`}
+                    }`}
                 >
                   {link.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-[1.5px] bg-brown transition-all duration-300 ease-out ${
-                      isActive ? "w-full" : "w-0 group-hover:w-full"
-                    } `}
+                    className={`absolute -bottom-1 left-0 h-[1.5px] bg-brown transition-all duration-300 ease-out ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                      } `}
                   />
                 </div>
               );
@@ -193,11 +190,10 @@ export default function Navbar() {
               // href="https://maps.app.goo.gl/jBX9HGtHyhLxGoj28"
               // target="_blank"
               onClick={() => setOpen(true)}
-              className={`group relative cursor-pointer font-sans text-[15px] font-medium tracking-wide ${
-                isScrolled
+              className={`group relative cursor-pointer font-sans text-[15px] font-medium tracking-wide ${isScrolled
                   ? "text-white/90 hover:text-zinc-300 bg-brown p-3 rounded-full "
                   : "text-white/90 hover:text-zinc-300 bg-brown p-3 rounded-full"
-              }`}
+                }`}
             >
               Order Now &rarr;
               <span className="absolute -bottom-1 left-0 h-[1.5px] w-0 bg-brand-red transition-all duration-300 ease-out group-hover:w-full" />
@@ -216,19 +212,16 @@ export default function Navbar() {
             </span>
             <div className="flex flex-col items-end space-y-1.5">
               <span
-                className={`h-px bg-black transition-all duration-300 ${
-                  isOpen ? "w-6 translate-y-1.75 rotate-45" : "w-6"
-                }`}
+                className={`h-px bg-black transition-all duration-300 ${isOpen ? "w-6 translate-y-1.75 rotate-45" : "w-6"
+                  }`}
               />
               <span
-                className={`h-px bg-black transition-all duration-300 ${
-                  isOpen ? "opacity-0" : "w-4"
-                }`}
+                className={`h-px bg-black transition-all duration-300 ${isOpen ? "opacity-0" : "w-4"
+                  }`}
               />
               <span
-                className={`h-px bg-black transition-all duration-300 ${
-                  isOpen ? "w-6 -translate-y-1.75 -rotate-45" : "w-5"
-                }`}
+                className={`h-px bg-black transition-all duration-300 ${isOpen ? "w-6 -translate-y-1.75 -rotate-45" : "w-5"
+                  }`}
               />
             </div>
           </button>
@@ -239,7 +232,7 @@ export default function Navbar() {
       {/* Mobile Menu Overlay - */}
       <div
         ref={mobileMenuRef}
-        className="fixed inset-0 z-55 mt-16 hidden h-screen w-screen flex-col items-center justify-center bg-white"
+        className="fixed inset-0 z-55 mt-16 hidden h-screen w-full flex-col items-center justify-center bg-white"
         style={{ opacity: 0 }}
       >
         <div className="flex flex-col -mt-20 items-center space-y-8 px-6 text-center">
@@ -247,21 +240,24 @@ export default function Navbar() {
             const isActive = pathname === link.href;
             return (
               <div key={link.name} className="overflow-hidden">
-                <Link
-                  href={link.href}
-                  onClick={toggleMenu}
+                <div
+                  // href={link.href}
+                  onClick={() => {
+                    toggleMenu();
+                    smoothScroll(link.href);
+                  }}
+                  // onClick={}
                   ref={(el) => {
                     mobileLinksRef.current[index] = el;
                   }}
-                  className="group relative block font-serif text-3xl font-medium tracking-tight text-black sm:text-4xl"
+                  className="group cursor-pointer relative block font-serif text-3xl font-medium tracking-tight text-black sm:text-4xl"
                 >
                   {link.name}
                   <span
-                    className={`absolute -bottom-2 left-1/2 h-px -translate-x-1/2 bg-brand-red transition-all duration-500 ease-out ${
-                      isActive ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
+                    className={`absolute -bottom-2 left-1/2 h-px -translate-x-1/2 bg-brand-red transition-all duration-500 ease-out ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
                   />
-                </Link>
+                </div>
               </div>
             );
           })}

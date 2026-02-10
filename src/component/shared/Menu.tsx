@@ -1,15 +1,53 @@
+"use client";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+
 const Menu = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const imgRef = useRef<HTMLAnchorElement>(null);
+
+  useGSAP(
+    () => {
+      // Force a refresh to catch accurate positions after Hero pinning
+      ScrollTrigger.refresh();
+
+      gsap.fromTo(
+        imgRef.current,
+        { opacity: 0, x: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        },
+      );
+    },
+    { scope: sectionRef },
+  );
+
   return (
-    <section className="py-10">
-      <a href="/images/menu.pdf" target="_blank">
-        <div className="flex items-center justify-center">
+    <section ref={sectionRef} className="py-10">
+      <div>
+        <a
+          ref={imgRef}
+          href="/images/menu.pdf"
+          target="_blank"
+          className="flex items-center justify-center"
+        >
           <img
             src="/images/menu.png"
             alt="menu"
             className="object-center md:h-150 h-100 w-auto object-cover"
           />
-        </div>
-      </a>
+        </a>
+      </div>
     </section>
   );
 };

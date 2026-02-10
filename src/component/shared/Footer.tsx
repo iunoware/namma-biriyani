@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import OrderModal from "./OrderModal";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -14,11 +15,11 @@ if (typeof window !== "undefined") {
 
 const footerLinks = {
   quickLinks: [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Menu", href: "/menu" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "home" },
+    { name: "About", href: "about" },
+    { name: "Menu", href: "menu" },
+
+    { name: "Contact", href: "contact" },
   ],
   contact: {
     address: "Plot No. 45, Bye Pass Road, Madurai - 625016",
@@ -45,21 +46,29 @@ const footerLinks = {
         </svg>
       ),
     },
-    {
-      name: "Google",
-      href: "#",
-      icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.96 3.4-2.12 4.52-1.48 1.48-3.76 3.08-7.84 3.08-6.4 0-11.64-5.2-11.64-11.6s5.24-11.6 11.64-11.6c3.48 0 6.04 1.36 7.92 3.16l2.32-2.32c-2.6-2.42-6.04-3.84-10.24-3.84-8.8 0-16 7.2-16 16s7.2 16 16 16c4.76 0 8.24-1.56 11.04-4.48 2.88-2.88 3.72-6.92 3.72-10.4 0-.68-.04-1.32-.12-1.92h-14.64z" />
-        </svg>
-      ),
-    },
+    // {
+    //   name: "Google",
+    //   href: "#",
+    //   icon: (
+    //     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+    //       <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.96 3.4-2.12 4.52-1.48 1.48-3.76 3.08-7.84 3.08-6.4 0-11.64-5.2-11.64-11.6s5.24-11.6 11.64-11.6c3.48 0 6.04 1.36 7.92 3.16l2.32-2.32c-2.6-2.42-6.04-3.84-10.24-3.84-8.8 0-16 7.2-16 16s7.2 16 16 16c4.76 0 8.24-1.56 11.04-4.48 2.88-2.88 3.72-6.92 3.72-10.4 0-.68-.04-1.32-.12-1.92h-14.64z" />
+    //     </svg>
+    //   ),
+    // },
   ],
 };
 
 const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [open, setOpen] = useState(false);
+
+  function smoothScroll(href: string) {
+    const section = document.getElementById(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   useGSAP(
     () => {
@@ -87,8 +96,9 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="bg-dark-brown text-zinc-400 font-body relative pt-20"
+      className="bg-dark-brown text-zinc-200 font-body relative pt-20"
     >
+      <OrderModal isOpen={open} onClose={() => setOpen(false)} />
       {/* Top Divider */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-zinc-800 to-transparent"></div>
 
@@ -96,9 +106,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand Column */}
           <div className="flex flex-col space-y-6">
-            <Link
-              href="/"
-              className="inline-block transform transition-transform hover:scale-105 duration-300"
+            <div
+              onClick={() => smoothScroll("home")}
+              className="inline-block transform transition-transform hover:scale-105 duration-300 cursor-pointer"
             >
               <Image
                 src="/images/pot-1.png"
@@ -107,10 +117,10 @@ const Footer = () => {
                 height={70}
                 className="w-auto h-12 brightness-110"
               />
-            </Link>
-            <p className="text-zinc-500 text-lg leading-relaxed font-medium tracking-tight">
+            </div>
+            <p className="text-white text-md leading-relaxed font-medium tracking-tight">
               Savour the{" "}
-              <span className="text-zinc-300 italic">authentic essence</span> of
+              <span className="text-white italic">authentic essence</span> of
               tradition in every grain. Authentic Madurai flavours, crafted with
               passion.
             </p>
@@ -118,19 +128,19 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="flex flex-col space-y-6">
-            <h4 className="text-zinc-100 font-heading text-xs tracking-[0.3em] uppercase font-bold">
+            <h4 className="text-white font-heading text-xs tracking-[0.3em] uppercase font-bold">
               Quick Links
             </h4>
             <ul className="flex flex-col space-y-4">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="group relative inline-block transition-colors duration-300 hover:text-brown"
+                  <div
+                    onClick={() => smoothScroll(link.href)}
+                    className="group relative inline-block transition-colors duration-300 hover:font-bold cursor-pointer"
                   >
                     {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-brown transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
+                    <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -143,26 +153,26 @@ const Footer = () => {
             </h4>
             <div className="flex flex-col space-y-5">
               <div className="group cursor-default">
-                <p className="text-zinc-500 text-xs uppercase tracking-widest mb-1 group-hover:text-brown transition-colors">
+                <p className="text-white/90 font-bold text-xs uppercase tracking-widest mb-1 group-hover:text-white transition-colors">
                   Address
                 </p>
-                <p className="text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                <p className="text-zinc-200 group-hover:text-white transition-colors">
                   {footerLinks.contact.address}
                 </p>
               </div>
               <div className="group cursor-default">
-                <p className="text-zinc-500 text-xs uppercase tracking-widest mb-1 group-hover:text-brown transition-colors">
+                <p className="text-zinc-200 text-xs uppercase tracking-widest mb-1 group-hover:text-white transition-colors">
                   Call Us
                 </p>
-                <p className="text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                <p className="text-zinc-200 group-hover:text-white transition-colors">
                   {footerLinks.contact.phone}
                 </p>
               </div>
               <div className="group cursor-default">
-                <p className="text-zinc-500 text-xs uppercase tracking-widest mb-1 group-hover:text-brown transition-colors">
+                <p className="text-zinc-200 text-xs uppercase tracking-widest mb-1 group-hover:text-white transition-colors">
                   Opening Hours
                 </p>
-                <p className="text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                <p className="text-zinc-200 group-hover:text-white transition-colors">
                   {footerLinks.contact.hours}
                 </p>
               </div>
@@ -180,7 +190,7 @@ const Footer = () => {
                   <Link
                     key={social.name}
                     href={social.href}
-                    className="w-10 h-10 rounded-full border border-zinc-800 flex items-center justify-center text-zinc-400 transition-all duration-300 hover:bg-brown hover:border-brown hover:text-white hover:-translate-y-1 shadow-sm"
+                    className="w-10 h-10 rounded-full border border-zinc-300 flex items-center justify-center text-white transition-all duration-300 hover:bg-brown hover:border-brown hover:text-white hover:-translate-y-1 shadow-sm"
                     aria-label={social.name}
                   >
                     {social.icon}
@@ -190,9 +200,9 @@ const Footer = () => {
             </div>
 
             <div className="pt-2">
-              <Link
-                href="/menu"
-                className="inline-flex items-center space-x-2 bg-brown hover:bg-dark-brown text-white px-8 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-brown/20 active:scale-95"
+              <div
+                onClick={() => setOpen(true)}
+                className="inline-flex items-center cursor-pointer space-x-2 text-dark-brown hover:text-white bg-white hover:bg-brown  px-8 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-brown/20 active:scale-95"
               >
                 <span>Order Online</span>
                 <svg
@@ -208,29 +218,27 @@ const Footer = () => {
                     d="M14 5l7 7-7 7M5 12h16"
                   />
                 </svg>
-              </Link>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-zinc-600 text-[13px] font-medium tracking-wide">
-          <div>
-            &copy; {new Date().getFullYear()} Namma Biriyani. All rights
-            reserved.
-          </div>
-          <div className="flex overflow-hidden group">
-            <span className="translate-y-0 group-hover:-translate-y-full transition-transform duration-500">
-              Designed with <span className="text-red-600">♥</span> in Madurai
-            </span>
-            <span className="absolute translate-y-full group-hover:translate-y-0 transition-transform duration-500 text-brown">
-              Crafting Culinary Excellence
-            </span>
+        <div className="mt-16 pt-8 border-t border-zinc-400 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-zinc-600 text-[13px] font-medium tracking-wide">
+          <div className="text-white">
+            &copy; {new Date().getFullYear()}{" "}
+            <a
+              href="https://www.iunoware.com/"
+              target="_blank"
+              className="font-extrabold"
+            >
+              Iunoware Pvt Ltd
+            </a>
+            . All rights reserved.
           </div>
         </div>
       </div>
     </footer>
   );
 };
-
 export default Footer;

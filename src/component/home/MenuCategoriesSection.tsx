@@ -1,51 +1,112 @@
 "use client";
+
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const categories = [
   {
     title: "Biriyanis",
     hint: "Signature seeraga samba & basmati specials",
     href: "/menu#biriyanis",
-    image: "/images/cuisine_spread_1770293825629.png",
+    image: "/images/DSC01788.JPG",
   },
   {
     title: "Chinese",
     hint: "Wok-fried classics & appetizers",
     href: "/menu#chinese",
-    image: "/images/cuisine_montage_premium_1770293849118.png",
+    image: "/images/chinese.jpg",
   },
   {
     title: "Tandoori & Tikkas",
     hint: "Clay-oven roasted smoky delights",
     href: "/menu#tandoori",
-    image: "/images/indian_cuisine_spread_1770293924843.png",
+    image: "/images/tandooro.jpg",
   },
   {
     title: "Parottas & South Indian",
     hint: "Flaky parottas & regional favorites",
     href: "/menu#south-indian",
-    image: "/images/indian_food_spread_premium_1770293876752.png",
+    image: "/images/parota.jfif",
   },
   {
-    title: "Bucket Biriyanis",
+    title: "Bucket Biryani's",
     hint: "Perfect for family gatherings",
     href: "/menu#buckets",
-    image: "/images/restaurant_spread_premium_1770293901185.png",
+    image: "/images/bucket.jfif",
   },
 ];
 
 const MenuCategoriesSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const headingRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      // Force refresh for accurate positioning
+      ScrollTrigger.refresh();
+
+      // Heading Reveal
+      gsap.fromTo(
+        headingRef.current,
+        { y: 30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: headingRef.current,
+            start: "top 90%",
+          },
+        },
+      );
+
+      // Staggered Cards Reveal
+      gsap.fromTo(
+        ".menu-card",
+        {
+          y: 60,
+          opacity: 0,
+          scale: 0.95,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 1.2,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        },
+      );
+    },
+    { scope: containerRef },
+  );
 
   return (
-    <section className="py-10">
+    <section ref={containerRef} className="py-20 overflow-hidden">
       <div
         id="menu"
         className="mx-auto flex items-center justify-center max-w-7xl px-6 lg:px-10"
       >
-        <div className="mb-12 lg:mb-20 flex items-center justify-center flex-col text-center lg:text-left">
+        <div
+          ref={headingRef}
+          className="mb-12 lg:mb-20 flex items-center justify-center flex-col text-center lg:text-left"
+        >
           <h2 className="font-heading text-4xl font-bold tracking-tight text-zinc-900 md:text-5xl">
             Explore <span className="text-brown">Our Menu</span>
           </h2>
@@ -53,7 +114,10 @@ const MenuCategoriesSection = () => {
         </div>
       </div>
 
-      <div className="flex md:flex-row flex-col gap-4 w-full px-6">
+      <div
+        ref={cardsRef}
+        className="flex md:flex-row flex-col gap-4 w-full px-6"
+      >
         {categories.map((category, index) => {
           const isActive = activeIndex === index;
 
@@ -67,11 +131,11 @@ const MenuCategoriesSection = () => {
                 flex: isActive ? 3 : 1,
               }}
               className={`
-                relative group h-125 overflow-hidden
-                transition-all duration-700 ease-in-out
-                bg-cover bg-center rounded-2xl
-                flex flex-col justify-end p-6 cursor-pointer
-              `}
+                  menu-card relative group h-125 overflow-hidden
+                  transition-all duration-700 ease-in-out
+                  bg-cover bg-center rounded-2xl
+                  flex flex-col justify-end p-6 cursor-pointer
+                `}
             >
               {/* overlay */}
               <div className="absolute inset-0 bg-black/40 transition-opacity duration-500" />
@@ -79,16 +143,16 @@ const MenuCategoriesSection = () => {
               {/* content */}
               <h2
                 className={`relative z-10 text-white font-semibold transition-all duration-500
-              ${isActive ? "text-4xl" : "text-2xl"}
-            `}
+                ${isActive ? "text-4xl" : "text-2xl"}
+              `}
               >
                 {category.title}
               </h2>
 
               <p
                 className={`relative z-10 mt-2 max-w-sm text-white/80 transition-all duration-500
-              ${isActive ? "opacity-100 text-lg" : "opacity-0 text-sm"}
-            `}
+                ${isActive ? "opacity-100 text-lg" : "opacity-0 text-sm"}
+              `}
               >
                 {category.hint}
               </p>

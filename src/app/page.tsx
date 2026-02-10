@@ -1,5 +1,7 @@
 import Hero from "@/component/home/Hero";
 import CuisineIntroSplit from "@/component/home/CuisineIntroSplit";
+import LegacySection from "@/component/home/LegacySection";
+
 import Interiors from "@/component/home/SignatueDishes";
 import MenuCategoriesSection from "@/component/home/MenuCategoriesSection";
 import WhyChooseUsSection from "@/component/home/WhyChooseUsSection";
@@ -16,6 +18,7 @@ export default function Home() {
     <div className="overflow-x-clip">
       <Hero />
       <CuisineIntroSplit />
+      <LegacySection />
       <Interiors />
       <EnnaiKari />
       <MenuCategoriesSection />
