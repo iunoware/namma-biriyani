@@ -15,9 +15,9 @@ const features = [
       "From seeraga samba biriyanis to classic curries, every dish is made with time-honoured recipes and bold, honest spices.",
     icon: (
       <svg
-        className="w-10 h-10 text-brown"
+        className="w-10 h-10 text-white"
         fill="none"
-        stroke="currentColor"
+        stroke="white"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -36,7 +36,7 @@ const features = [
       "No shortcuts, no reheating. Everything is prepared fresh every day to deliver flavour you can taste.",
     icon: (
       <svg
-        className="w-10 h-10 text-brown"
+        className="w-10 h-10 text-white"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ const features = [
       "Biriyanis, Chinese, tandoori, parottas, North Indian favourites — there’s something here for every mood and moment.",
     icon: (
       <svg
-        className="w-10 h-10 text-brown"
+        className="w-10 h-10 text-white"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -111,15 +111,15 @@ const WhyChooseUsSection = () => {
     <section
       ref={sectionRef}
       id="why-choose-us"
-      className="py-20 md:py-32 bg-white overflow-hidden"
+      className="py-20 md:py-32 bg-[url('/images/mob-bg.png')] md:bg-[url('/images/bg.jpg')] bg-center bg-cover overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
-        <div className="text-center">
+        <div className="text-center translate-y-10">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-zinc-900 mb-6">
-            Why <span className="text-brown">Choose Us</span>
+            Why <span className="text-black">Choose Us</span>
           </h2>
-          <p className="max-w-xl mx-auto text-lg md:text-xl text-zinc-600 font-body">
+          <p className="max-w-xl mx-auto text-lg md:text-xl text-zinc-700 font-body">
             Because great food starts with doing things the right way.
           </p>
           <div className="mt-8 h-1 w-24 bg-brown/20 mx-auto rounded-full"></div>
@@ -133,15 +133,15 @@ const WhyChooseUsSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col transition-all duration-200 hover:bg-brown/5 rounded-2xl p-10 h-fit items-center text-center ${index === 1 ? "md:translate-y-24!" : ""}`}
+              className={`flex hover:scale-105! z-10 flex-col transition-all duration-400 bg-white/40 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_6px_3px_rgba(255,255,255,0.3)] rounded-2xl p-10 h-fit items-center text-center ${index === 1 ? "md:translate-y-24!" : ""}`}
             >
-              <div className="mb-8 mt-10 p-4 rounded-2xl bg-dark-brown/10">
+              <div className="mb-8 mt-5 p-4 rounded-2xl bg-brown">
                 {feature.icon}
               </div>
               <h3 className="text-2xl font-heading font-bold text-zinc-900 mb-4">
                 {feature.title}
               </h3>
-              <p className="text-zinc-600 leading-relaxed font-body text-balance">
+              <p className="text-zinc-800 leading-relaxed font-body text-balance">
                 {feature.description}
               </p>
             </div>

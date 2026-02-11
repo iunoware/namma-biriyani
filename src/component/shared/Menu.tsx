@@ -5,13 +5,16 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 const Menu = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const imgRef = useRef<HTMLAnchorElement>(null);
 
   useGSAP(
     () => {
-      // Force a refresh to catch accurate positions after Hero pinning
       ScrollTrigger.refresh();
 
       gsap.fromTo(
@@ -20,6 +23,7 @@ const Menu = () => {
         {
           opacity: 1,
           y: 0,
+          x: 0,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {

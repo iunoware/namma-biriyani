@@ -108,9 +108,8 @@ const LocationSection = () => {
                       Location
                     </h4>
                     <p className="text-zinc-700 font-medium text-lg leading-relaxed">
-                      Opp. Meenakshi Amman Temple,
-                      <br />
-                      Simmakkal, Madurai,
+                      Rasi Towers, Bypass Rd, near Aristo Hospital, below
+                      Domino's Pizza Madurai,
                       <br />
                       Tamil Nadu 625001.
                     </p>
@@ -191,7 +190,7 @@ const LocationSection = () => {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 mt-12 info-block">
                 <a
-                  href="https://maps.google.com"
+                  href="https://maps.app.goo.gl/7U2HB8BCAqnKdjfA9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-brown text-white font-bold py-4 px-6 rounded-2xl text-center shadow-lg shadow-brown/20 hover:bg-dark-brown transition-all duration-300 transform hover:-translate-y-1 active:scale-95"
@@ -217,7 +216,7 @@ const LocationSection = () => {
           <div className="w-full h-full lg:p-8">
             <div className="w-full h-full rounded-b-[2.5rem] lg:rounded-2xl overflow-hidden shadow-2xl bg-zinc-100 border border-zinc-200">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.282534575!2d78.114389!3d9.917898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5bf56f87455%3A0x6b4c38d3e230d37e!2sMeenakshi%20Amman%20Temple!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125763.90995602818!2d78.00434534335939!3d9.9237808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5004a14ad4b%3A0x78103c6ed126d4fa!2sNamma%20Briyani!5e0!3m2!1sen!2sin!4v1770790123153!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
@@ -62,6 +62,12 @@ const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
+
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
 
   function smoothScroll(href: string) {
     const section = document.getElementById(href);
@@ -226,7 +232,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-zinc-400 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-zinc-600 text-[13px] font-medium tracking-wide">
           <div className="text-white">
-            &copy; {new Date().getFullYear()}{" "}
+            &copy; {year || "2026"}{" "}
             <a
               href="https://www.iunoware.com/"
               target="_blank"
@@ -239,6 +245,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+
   );
 };
 export default Footer;

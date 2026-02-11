@@ -117,9 +117,13 @@ export default function Interiors() {
             </p>
 
             <div className="relative group inline-block">
-              <button className=" font-heading cursor-pointer text-[13px] font-semibold tracking-widest uppercase text-black group-hover:text-brown transition-colors duration-300">
+              <a
+                href="/images/menu.pdf"
+                target="_blank"
+                className=" font-heading cursor-pointer text-[13px] font-semibold tracking-widest uppercase text-black group-hover:text-brown transition-colors duration-300"
+              >
                 View Biryani Menu
-              </button>
+              </a>
               <div className="absolute -bottom-1 left-0 w-full h-px bg-brown group-hover:bg-dark-brown scale-x-100 group-hover:scale-x-110 transition-all duration-300"></div>
             </div>
           </div>

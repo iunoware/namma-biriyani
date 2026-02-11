@@ -88,7 +88,7 @@ const LegacySection = () => {
                   alt="JKans Heritage Logo"
                   width={300}
                   height={150}
-                  className="w-auto h-16 md:h-24 lg:h-32 object-contain"
+                  className="w-auto h-36 md:h-44 object-contain"
                 />
               </div>
 

@@ -122,7 +122,9 @@ const MenuCategoriesSection = () => {
           const isActive = activeIndex === index;
 
           return (
-            <div
+            <a
+              href="/images/menu.pdf"
+              target="_blank"
               key={index}
               onMouseEnter={() => setActiveIndex(index)}
               onMouseLeave={() => setActiveIndex(0)}
@@ -156,7 +158,7 @@ const MenuCategoriesSection = () => {
               >
                 {category.hint}
               </p>
-            </div>
+            </a>
           );
         })}
       </div>

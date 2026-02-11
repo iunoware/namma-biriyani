@@ -5,7 +5,9 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const ContactSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -245,11 +247,10 @@ const ContactSection = () => {
                     className="group relative w-full h-16 bg-dark-brown text-white rounded-2xl font-heading text-xl overflow-hidden transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_20px_40px_-10px_rgba(170,5,3,0.3)] hover:shadow-[0_20px_40px_-5px_rgba(170,5,3,0.4)]"
                   >
                     <span
-                      className={`flex items-center justify-center gap-3 transition-all duration-500 ${
-                        status === "loading"
+                      className={`flex items-center justify-center gap-3 transition-all duration-500 ${status === "loading"
                           ? "-translate-y-full opacity-0"
                           : "translate-y-0 opacity-100"
-                      }`}
+                        }`}
                     >
                       Send Enquiry
                       <svg
@@ -267,11 +268,10 @@ const ContactSection = () => {
                       </svg>
                     </span>
                     <span
-                      className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
-                        status === "loading"
+                      className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${status === "loading"
                           ? "translate-y-0 opacity-100"
                           : "translate-y-full opacity-0"
-                      }`}
+                        }`}
                     >
                       <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                     </span>

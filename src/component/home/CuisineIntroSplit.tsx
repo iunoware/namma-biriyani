@@ -14,6 +14,13 @@ const CuisineIntroSplit = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageContainerRef = useRef<HTMLDivElement>(null);
 
+  function smoothScroll(href: string) {
+    const section = document.getElementById(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   useGSAP(
     () => {
       if (!containerRef.current) return;
@@ -93,7 +100,10 @@ const CuisineIntroSplit = () => {
             </p>
 
             <div className="cuisine-reveal mt-10 md:mt-12">
-              <button className="group relative overflow-hidden rounded-full bg-brown px-8 py-4 transition-all hover:pr-12 md:p-3">
+              <button
+                onClick={() => smoothScroll("menu")}
+                className="group cursor-pointer relative overflow-hidden rounded-full bg-brown px-8 py-4 transition-all hover:pr-12 md:p-3"
+              >
                 <span className="relative z-10 font-body text-base font-semibold tracking-wide text-white md:text-lg">
                   Explore Our Menu
                 </span>

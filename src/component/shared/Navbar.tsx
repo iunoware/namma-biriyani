@@ -140,8 +140,9 @@ export default function Navbar() {
     <>
       <nav
         ref={navRef}
-        className={`${showNavbar ? "translate-y-0" : "-translate-y-full!"
-          } fixed top-0 z-50 w-full h-16 md:h-22 transition-all duration-300 ${isScrolled ? "bg-white shadow-sm" : "bg-transparent"}`}
+        className={`${
+          showNavbar ? "translate-y-0" : "-translate-y-full!"
+        } fixed top-0 z-50 w-full h-16 md:h-20 transition-all duration-300 ${isScrolled ? "bg-white shadow-sm" : "bg-transparent"}`}
       >
         <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 md:px-10">
           {/* Left: Brand Name */}
@@ -152,7 +153,7 @@ export default function Navbar() {
                 alt="Ambience and table setting at Chopstix"
                 width={140}
                 height={60}
-                className="w-auto md:h-15 h-6"
+                className="w-auto md:h-10 h-8"
               />
             </Link>
           </div>
@@ -169,15 +170,17 @@ export default function Navbar() {
                   key={link.name}
                   // href={link.href}
                   onClick={() => smoothScroll(link.href)}
-                  className={`group cursor-pointer relative font-sans text-[15px] font-medium tracking-wide  ${isScrolled
+                  className={`group cursor-pointer relative font-sans text-[15px] font-medium tracking-wide  ${
+                    isScrolled
                       ? "text-zinc-950"
                       : "text-white/90 hover:text-zinc-300"
-                    }`}
+                  }`}
                 >
                   {link.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-[1.5px] bg-brown transition-all duration-300 ease-out ${isActive ? "w-full" : "w-0 group-hover:w-full"
-                      } `}
+                    className={`absolute -bottom-1 left-0 h-[1.5px] bg-brown transition-all duration-300 ease-out ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    } `}
                   />
                 </div>
               );
@@ -190,10 +193,11 @@ export default function Navbar() {
               // href="https://maps.app.goo.gl/jBX9HGtHyhLxGoj28"
               // target="_blank"
               onClick={() => setOpen(true)}
-              className={`group relative cursor-pointer font-sans text-[15px] font-medium tracking-wide ${isScrolled
+              className={`group relative cursor-pointer font-sans text-[15px] font-medium tracking-wide ${
+                isScrolled
                   ? "text-white/90 hover:text-zinc-300 bg-brown p-3 rounded-full "
                   : "text-white/90 hover:text-zinc-300 bg-brown p-3 rounded-full"
-                }`}
+              }`}
             >
               Order Now &rarr;
               <span className="absolute -bottom-1 left-0 h-[1.5px] w-0 bg-brand-red transition-all duration-300 ease-out group-hover:w-full" />
@@ -207,21 +211,26 @@ export default function Navbar() {
             className="relative z-999 flex items-center space-x-3 focus:outline-none md:hidden"
             aria-label="Toggle Menu"
           >
-            <span className="font-sans text-[11px] font-medium tracking-[0.2em] text-black uppercase transition-all duration-300">
+            <span
+              className={`font-sans text-[11px] ${isScrolled ? "text-black" : "text-white"} font-medium tracking-[0.2em] uppercase transition-all duration-300`}
+            >
               {isOpen ? "Close" : "Menu"}
             </span>
             <div className="flex flex-col items-end space-y-1.5">
               <span
-                className={`h-px bg-black transition-all duration-300 ${isOpen ? "w-6 translate-y-1.75 rotate-45" : "w-6"
-                  }`}
+                className={`${isScrolled ? "bg-black" : "bg-white"} h-px bg-black transition-all duration-300 ${
+                  isOpen ? "w-6 translate-y-1.75 rotate-45" : "w-6"
+                }`}
               />
               <span
-                className={`h-px bg-black transition-all duration-300 ${isOpen ? "opacity-0" : "w-4"
-                  }`}
+                className={`${isScrolled ? "bg-black" : "bg-white"} h-px transition-all duration-300 ${
+                  isOpen ? "opacity-0" : "w-4"
+                }`}
               />
               <span
-                className={`h-px bg-black transition-all duration-300 ${isOpen ? "w-6 -translate-y-1.75 -rotate-45" : "w-5"
-                  }`}
+                className={`${isScrolled ? "bg-black" : "bg-white"} h-px bg-black transition-all duration-300 ${
+                  isOpen ? "w-6 -translate-y-1.75 -rotate-45" : "w-5"
+                }`}
               />
             </div>
           </button>
@@ -254,8 +263,9 @@ export default function Navbar() {
                 >
                   {link.name}
                   <span
-                    className={`absolute -bottom-2 left-1/2 h-px -translate-x-1/2 bg-brand-red transition-all duration-500 ease-out ${isActive ? "w-full" : "w-0 group-hover:w-full"
-                      }`}
+                    className={`absolute -bottom-2 left-1/2 h-px -translate-x-1/2 bg-brand-red transition-all duration-500 ease-out ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
                   />
                 </div>
               </div>

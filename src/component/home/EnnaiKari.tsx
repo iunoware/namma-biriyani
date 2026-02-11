@@ -1,11 +1,23 @@
 "use client";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const EnnaiKari = () => {
   const containerRef = useRef<HTMLElement>(null);
   const imageContainerRef = useRef<HTMLImageElement>(null);
+
+  function smoothScroll(href: string) {
+    const section = document.getElementById(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   useGSAP(
     () => {
@@ -59,16 +71,21 @@ const EnnaiKari = () => {
     >
       <div className="bg-brown/50 max-w-375 p-5  grid md:grid-cols-2 grid-cols-1 w-[90vw] md:h-110 rounded-2xl overflow-hidden relative">
         <div className="flex flex-col space-y-2  md:translate-x-30 items-start justify-center">
-          <p className="text-lg font-bold  font-accent">Signature Starter</p>
+          <p className="text-xl font-bold  font-accent">
+            Madurai's Best Starter
+          </p>
           <h1 className="text-4xl cuisine-reveal font-bold text-dark-brown">
             Usilampatti Ennai Kari
           </h1>
           <p className="text-lg cuisine-reveal max-w-lg pt-5">
             A fiery Usilampatti classic cooked in pure gingelly oil with
             hand-ground spices and bold Tamil Nadu flavors. Rich, aromatic, and
-            unforgettable — our top-selling starter for a reason.
+            unforgettable - our top-selling starter for a reason.
           </p>
-          <button className="group cuisine-reveal mt-5 cursor-pointer relative overflow-hidden rounded-full bg-dark-brown px-8 py-4 transition-all hover:pr-12 md:p-4">
+          <button
+            onClick={() => smoothScroll("menu")}
+            className="group cuisine-reveal mt-5 cursor-pointer relative overflow-hidden rounded-full bg-dark-brown px-8 py-4 transition-all hover:pr-12 md:p-4"
+          >
             <span className="relative  z-10 font-body text-base font-semibold tracking-wide text-white md:text-lg">
               Explore Our Menu
             </span>
@@ -93,7 +110,7 @@ const EnnaiKari = () => {
             ref={imageContainerRef}
             src="/images/yennai-kaari.png"
             alt="Best Hotel in Madurai"
-            className="md:h-70 md:mt-0 mt-20 h-50 w-auto z-10 hover:scale-110 transition-all duration-500"
+            className="md:h-70 md:mt-0 mt-20 h-50 w-auto z-10 hover:scale-110! transition-all duration-500"
           />
           <div className="absolute w-fit -top-5 -right-5">
             <svg
