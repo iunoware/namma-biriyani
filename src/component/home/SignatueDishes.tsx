@@ -86,7 +86,7 @@ export default function Interiors() {
             className="w-full rounded-2xl lg:w-1/4 h-100 lg:h-110 relative order-2 lg:order-1 lg:mt-24 shadow-2xl overflow-hidden group"
           >
             <Image
-              src="/images/biryani-2.jfif"
+              src="/images/biryani-2.jpg"
               alt="Best Chicken Biryani in Madurai"
               fill
               className="object-cover rounded-2xl grayscale-0 hover:grayscale transition-all duration-1000 scale-105 group-hover:scale-100"
