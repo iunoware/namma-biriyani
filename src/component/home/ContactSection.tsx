@@ -248,8 +248,8 @@ const ContactSection = () => {
                   >
                     <span
                       className={`flex items-center justify-center gap-3 transition-all duration-500 ${status === "loading"
-                          ? "-translate-y-full opacity-0"
-                          : "translate-y-0 opacity-100"
+                        ? "-translate-y-full opacity-0"
+                        : "translate-y-0 opacity-100"
                         }`}
                     >
                       Send Enquiry
@@ -269,8 +269,8 @@ const ContactSection = () => {
                     </span>
                     <span
                       className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${status === "loading"
-                          ? "translate-y-0 opacity-100"
-                          : "translate-y-full opacity-0"
+                        ? "translate-y-0 opacity-100"
+                        : "translate-y-full opacity-0"
                         }`}
                     >
                       <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />

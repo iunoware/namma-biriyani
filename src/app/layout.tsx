@@ -9,8 +9,9 @@ import Navbar from "@/component/shared/Navbar";
 import Footer from "@/component/shared/Footer";
 
 export const metadata: Metadata = {
-  title: "Namma Biryani",
-  description: "Best Biryani in Madurai",
+  title: "Best Biryani in Madurai - Namma Biryani",
+  description:
+    "Experience the Best Biryani in Madurai at Namma Biryani. From authentic Chicken Biryani in Madurai to our famous Bucket Biryani Madurai, discover the top-rated Multi Cuisine Restaurant in Madurai.",
   icons: {
     icon: {
       // media: "(prefers-color-scheme: light)",

@@ -109,7 +109,7 @@ const EnnaiKari = () => {
           <img
             ref={imageContainerRef}
             src="/images/yennai-kaari.png"
-            alt="Best Hotel in Madurai"
+            alt="Best Chicken Biryani in Madurai - Ennai Kari"
             className="md:h-70 md:mt-0 mt-20 h-50 w-auto z-10 hover:scale-110! transition-all duration-500"
           />
           <div className="absolute w-fit -top-5 -right-5">

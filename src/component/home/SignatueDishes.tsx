@@ -86,8 +86,8 @@ export default function Interiors() {
             className="w-full rounded-2xl lg:w-1/4 h-100 lg:h-110 relative order-2 lg:order-1 lg:mt-24 shadow-2xl overflow-hidden group"
           >
             <Image
-              src="/images/biryani-1.png"
-              alt="Chopstix Minimalist Interior"
+              src="/images/biryani-2.jfif"
+              alt="Best Chicken Biryani in Madurai"
               fill
               className="object-cover rounded-2xl grayscale-0 hover:grayscale transition-all duration-1000 scale-105 group-hover:scale-100"
             />
@@ -109,11 +109,11 @@ export default function Interiors() {
               <span className="italic text-dark-brown">Known For</span>
             </h2>
 
-            <p className="font-serif text-black/60 text-lg md:text-xl leading-relaxed max-w-lg mx-auto mb-12">
+            <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed max-w-lg mx-auto mb-12">
               Slow-cooked with fragrant seeraga samba rice, layered spices, and
               traditional techniques, our biryani is rich, aromatic, and deeply
               satisfying. Cooked in classic copper vessels and served hot — this
-              is the dish that keeps our tables full.
+              is the best biryani in Madurai for lunch or dinner.
             </p>
 
             <div className="relative group inline-block">
@@ -134,8 +134,8 @@ export default function Interiors() {
             className="w-full rounded-2xl lg:w-1/4 h-100 lg:h-110 relative order-3 lg:mb-24 shadow-2xl overflow-hidden group"
           >
             <Image
-              src="/images/bucket.jfif"
-              alt="Elegant Table Setting"
+              src="/images/bucket.png"
+              alt="Best Bucket Biryani Madurai"
               fill
               className="object-cover rounded-2xl object-left grayscale-0 hover:grayscale transition-all duration-1000 scale-105 group-hover:scale-100"
             />

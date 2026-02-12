@@ -12,22 +12,22 @@ if (typeof window !== "undefined") {
 const images = [
   {
     src: "/images/DSC01788.JPG",
-    alt: "Namma Biriyani Cuisine Spread",
+    alt: "Best Biryani Restaurants in Madurai - Namma Biryani Cuisine",
     className: "col-span-12 md:col-span-6 md:row-span-2 h-[400px] md:h-full",
   },
   {
     src: "/images/kola.JPG",
-    alt: "Premium Food Montage",
+    alt: "Best Chicken Biryani in Madurai - Mutton Kola Urundai",
     className: "col-span-12 md:col-span-6 h-[300px] md:h-full",
   },
   {
     src: "/images/indian_cuisine_spread_1770293924843.png",
-    alt: "Authentic Indian Flavours",
+    alt: "Best South Indian Restaurant in Madurai - Authentic Flavors",
     className: "col-span-6 md:col-span-3 h-[250px] md:h-full",
   },
   {
     src: "/images/dish-1.JPG",
-    alt: "Restaurant Atmosphere",
+    alt: "Best Restaurants in Madurai - Dining Atmosphere",
     className: "col-span-6 md:col-span-3 h-[250px] md:h-full",
   },
 ];

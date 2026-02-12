@@ -54,7 +54,7 @@ const features = [
   {
     title: "One Place, Many Cravings",
     description:
-      "Biriyanis, Chinese, tandoori, parottas, North Indian favourites — there’s something here for every mood and moment.",
+      "Biriyanis, Chinese, tandoori, parottas, North Indian favourites — we are the top multi cuisine restaurant in Madurai for every craving.",
     icon: (
       <svg
         className="w-10 h-10 text-white"

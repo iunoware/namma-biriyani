@@ -85,7 +85,7 @@ const LegacySection = () => {
               <div className="relative">
                 <Image
                   src="/images/logo-2.png"
-                  alt="JKans Heritage Logo"
+                  alt="Madurai Chettinadu South Indian Restaurant Heritage"
                   width={300}
                   height={150}
                   className="w-auto h-36 md:h-44 object-contain"

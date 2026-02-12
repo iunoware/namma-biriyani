@@ -127,6 +127,7 @@ const Hero = () => {
           muted
           playsInline
           preload="auto"
+          poster="/images/hero-fallback.png"
           className="w-full h-full object-cover pointer-events-none select-none"
           style={{ willChange: "transform, contents" }}
         />
@@ -164,7 +165,7 @@ const Hero = () => {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/biryani-1.png"
-            alt="Authentic Namma Biryani"
+            alt="Best Chicken Biryani in Madurai - Namma Biryani"
             fill
             className="object-cover opacity-60"
             priority
@@ -185,8 +186,9 @@ const Hero = () => {
           </h1>
 
           <p className="font-body text-zinc-300 text-base leading-relaxed mb-10">
-            A focused expression of everything we’ve learned — dedicated
-            entirely to biryani. Crafted with passion, rooted in tradition.
+            Biryani Right Here in Madurai — a focused expression of everything
+            we’ve learned. Crafted with passion, rooted in tradition. Discover
+            the best biryani in Madurai for lunch or dinner.
           </p>
 
           <button

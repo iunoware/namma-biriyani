@@ -14,7 +14,7 @@ if (typeof window !== "undefined") {
 const categories = [
   {
     title: "Biriyanis",
-    hint: "Signature seeraga samba & basmati specials",
+    hint: "Best chicken biryani in Madurai with signature seeraga samba & basmati specials",
     href: "/menu#biriyanis",
     image: "/images/DSC01788.JPG",
   },

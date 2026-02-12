@@ -133,7 +133,7 @@ const CuisineIntroSplit = () => {
             <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl shadow-2xl shadow-brown/10 lg:aspect-3/4">
               <Image
                 src="/images/restaurant_cuisine_spread_1770293763835.png"
-                alt="Assorted Indian Cuisine Platter"
+                alt="Hyderabadi Chicken Biryani Near Me - Signature Flavors"
                 fill
                 className="object-cover transition-transform duration-1000 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
