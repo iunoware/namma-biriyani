@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { HtmlContext } from "next/dist/server/route-modules/pages/vendored/contexts/entrypoints";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -13,6 +14,7 @@ if (typeof window !== "undefined") {
 const CuisineIntroSplit = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageContainerRef = useRef<HTMLDivElement>(null);
+  const summaRef = useRef<HTMLDivElement>(null);
 
   function smoothScroll(href: string) {
     const section = document.getElementById(href);
