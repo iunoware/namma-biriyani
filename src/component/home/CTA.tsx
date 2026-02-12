@@ -83,8 +83,8 @@ const CTA = () => {
       <div className="flex justify-center">
         <img
           src="/images/biryani-1.png"
-          alt=""
-          className="md:-translate-y-12 form-container md:h-90 w-auto object-center object-cover"
+          alt="Best Chicken biryani"
+          className="md:-translate-y-10 form-container md:h-90 w-auto object-center object-cover"
         />
       </div>
       <div className="flex justify-center">
