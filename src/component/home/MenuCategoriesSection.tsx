@@ -40,7 +40,7 @@ const categories = [
     title: "Bucket Biryani's",
     hint: "Perfect for family gatherings",
     href: "/menu#buckets",
-    image: "/images/bucket.jfif",
+    image: "/images/bucket.png",
   },
 ];
 
