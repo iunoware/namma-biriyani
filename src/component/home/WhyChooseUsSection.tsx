@@ -133,7 +133,7 @@ const WhyChooseUsSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex hover:scale-105! z-10 flex-col transition-all duration-400 bg-white/40 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_6px_3px_rgba(255,255,255,0.3)] rounded-2xl p-10 h-fit items-center text-center ${index === 1 ? "md:translate-y-24!" : ""}`}
+              className={`flex hover:scale-105! z-10 flex-col transition-all duration-400 bg-white/40 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_6px_3px_rgba(255,255,255,0.3)] backdrop-blur-xs rounded-2xl p-10 h-fit items-center text-center ${index === 1 ? "md:translate-y-24!" : ""}`}
             >
               <div className="mb-8 mt-5 p-4 rounded-2xl bg-brown">
                 {feature.icon}
