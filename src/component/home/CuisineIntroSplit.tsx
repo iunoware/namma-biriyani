@@ -93,10 +93,10 @@ const CuisineIntroSplit = () => {
               {/* From iconic biriyanis layered with bold spices to sizzling tandoors fresh
               off the grill, our kitchen is all about flavour that hits right. Every dish
               is crafted with care, rich aromas, and the comfort you keep coming back for. */}
-              From iconic biryani layered with bold spices to sizzling tandoors fresh
-              off the grill, <strong>Namma Biryani</strong> is proud to be known as one of
-              the <strong>best biryani restaurants in Madurai</strong>. Every plate — from
-              our signature <strong>Chicken Dum Biryani in Madurai</strong> to slow-cooked
+              From iconic briyani layered with bold spices to sizzling tandoors fresh
+              off the grill, <strong>Namma Briyani</strong> is proud to be known as one of
+              the <strong>best briyani restaurants in Madurai</strong>. Every plate — from
+              our signature <strong>Chicken Dum Briyani in Madurai</strong> to slow-cooked
               specialities — is crafted with care, rich aromas, and the comfort you keep
               coming back for.
             </p>
@@ -144,7 +144,7 @@ const CuisineIntroSplit = () => {
             <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl shadow-2xl shadow-brown/10 lg:aspect-3/4">
               <Image
                 src="/images/restaurant_cuisine_spread_1770293763835.png"
-                alt="Hyderabadi Chicken Biryani Near Me - Signature Flavors"
+                alt="Hyderabadi Chicken briyani Near Me - Signature Flavors"
                 fill
                 className="object-cover transition-transform duration-1000 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -115,9 +115,9 @@ export default function Interiors() {
               satisfying. Cooked in classic copper vessels and served hot — this is the
               best biryani in Madurai for lunch or dinner. */}
               Slow-cooked with fragrant seeraga samba rice, layered spices, and
-              traditional techniques, our biryani is rich, aromatic, and deeply
+              traditional techniques, our briyani is rich, aromatic, and deeply
               satisfying. Cooked in classic copper vessels and served hot — it’s why Namma
-              Biryani is counted among the best biryani restaurants in Madurai for lunch
+              Briyani is counted among the best briyani restaurants in Madurai for lunch
               or dinner.
             </p>
 
@@ -127,7 +127,7 @@ export default function Interiors() {
                 target="_blank"
                 className=" font-heading cursor-pointer text-[13px] font-semibold tracking-widest uppercase text-black group-hover:text-brown transition-colors duration-300"
               >
-                View Biryani Menu
+                View Briyani Menu
               </a>
               <div className="absolute -bottom-1 left-0 w-full h-px bg-brown group-hover:bg-dark-brown scale-x-100 group-hover:scale-x-110 transition-all duration-300"></div>
             </div>

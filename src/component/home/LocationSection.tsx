@@ -208,14 +208,9 @@ const LocationSection = () => {
           <div className="w-full h-full lg:p-8">
             <div className="w-full h-full rounded-b-[2.5rem] lg:rounded-2xl overflow-hidden shadow-2xl bg-zinc-100 border border-zinc-200">
               <iframe
-                // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125763.90995602818!2d78.00434534335939!3d9.9237808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5004a14ad4b%3A0x78103c6ed126d4fa!2sNamma%20Briyani!5e0!3m2!1sen!2sin!4v1770790123153!5m2!1sen!2sin"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d245.635453584663!2d78.0933583649668!3d9.920024421499535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1771315127675!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.1673427864857!2d78.0932267!3d9.9200173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cfba97ed0ce3%3A0xdc567fc1185cf9fb!2sNamma%20Briyani%20Bypass!5e0!3m2!1sen!2sin!4v1771324194635!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
-                style={{
-                  border: 0,
-                  filter: "grayscale(1) contrast(1.1) brightness(1.1) opacity(0.9)",
-                }}
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

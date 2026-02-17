@@ -13,8 +13,8 @@ if (typeof window !== "undefined") {
 
 const categories = [
   {
-    title: "Biryani",
-    hint: "Best chicken biryani in Madurai with signature seeraga samba & basmati specials",
+    title: "Briyani",
+    hint: "Best chicken briyani in Madurai with signature seeraga samba & basmati specials",
     href: "/menu#biriyanis",
     image: "/images/DSC01788.JPG",
   },
@@ -37,7 +37,7 @@ const categories = [
     image: "/images/parota.jfif",
   },
   {
-    title: "Bucket Biryani's",
+    title: "Bucket Briyani's",
     hint: "Perfect for family gatherings",
     href: "/menu#buckets",
     image: "/images/bucket.png",
