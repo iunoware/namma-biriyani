@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import {
-  Playfair_Display,
-  Source_Sans_3,
-  Marck_Script,
-} from "next/font/google";
+import { Playfair_Display, Source_Sans_3, Marck_Script } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/shared/Navbar";
 import Footer from "@/component/shared/Footer";
 
 export const metadata: Metadata = {
-  title: "Best Biryani in Madurai - Namma Biryani",
+  title: "Best Biryani in Madurai - Namma Briyani",
   description:
     "Experience the Best Biryani in Madurai at Namma Biryani. From authentic Chicken Biryani in Madurai to our famous Bucket Biryani Madurai, discover the top-rated Multi Cuisine Restaurant in Madurai.",
   icons: {
