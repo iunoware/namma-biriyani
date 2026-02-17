@@ -23,8 +23,10 @@ const footerLinks = {
   ],
   contact: {
     address: "Plot No. 45, Bye Pass Road, Madurai - 625016",
-    phone: "+91 98765 43210",
-    email: "hello@nammabiriyani.com",
+    map: "https://maps.app.goo.gl/iEjResxM8fUXEmeo8",
+    phone: "+91 9626 8888 71",
+    tel: "tel:+919626888871",
+    email: "nammabriyanibyepass@gmail.com",
     hours: "Open Daily: 11:00 AM - 11:00 PM",
   },
   socials: [
@@ -118,17 +120,15 @@ const Footer = () => {
             >
               <Image
                 src="/images/pot-1.png"
-                alt="Namma Biriyani Logo"
+                alt="Namma Biryani Logo"
                 width={160}
                 height={70}
                 className="w-auto h-12 brightness-110"
               />
             </div>
             <p className="text-white text-md leading-relaxed font-medium tracking-tight">
-              Savour the{" "}
-              <span className="text-white italic">authentic essence</span> of
-              tradition in every grain. Authentic Madurai flavours, crafted with
-              passion.
+              Savour the <span className="text-white italic">authentic essence</span> of
+              tradition in every grain. Authentic Madurai flavours, crafted with passion.
             </p>
           </div>
 
@@ -162,17 +162,27 @@ const Footer = () => {
                 <p className="text-white/90 font-bold text-xs uppercase tracking-widest mb-1 group-hover:text-white transition-colors">
                   Address
                 </p>
-                <p className="text-zinc-200 group-hover:text-white transition-colors">
+                <a
+                  href={footerLinks.contact.map}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="text-zinc-200 group-hover:text-white transition-colors"
+                >
                   {footerLinks.contact.address}
-                </p>
+                </a>
               </div>
               <div className="group cursor-default">
                 <p className="text-zinc-200 text-xs uppercase tracking-widest mb-1 group-hover:text-white transition-colors">
                   Call Us
                 </p>
-                <p className="text-zinc-200 group-hover:text-white transition-colors">
+                <a
+                  href={footerLinks.contact.tel}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="text-zinc-200 group-hover:text-white transition-colors"
+                >
                   {footerLinks.contact.phone}
-                </p>
+                </a>
               </div>
               <div className="group cursor-default">
                 <p className="text-zinc-200 text-xs uppercase tracking-widest mb-1 group-hover:text-white transition-colors">
@@ -245,7 +255,6 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-
   );
 };
 export default Footer;

@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useRef, useState } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,7 +13,7 @@ if (typeof window !== "undefined") {
 
 const categories = [
   {
-    title: "Biriyanis",
+    title: "Biryani",
     hint: "Best chicken biryani in Madurai with signature seeraga samba & basmati specials",
     href: "/menu#biriyanis",
     image: "/images/DSC01788.JPG",
@@ -114,10 +114,7 @@ const MenuCategoriesSection = () => {
         </div>
       </div>
 
-      <div
-        ref={cardsRef}
-        className="flex md:flex-row flex-col gap-4 w-full px-6"
-      >
+      <div ref={cardsRef} className="flex md:flex-row flex-col gap-4 w-full px-6">
         {categories.map((category, index) => {
           const isActive = activeIndex === index;
 

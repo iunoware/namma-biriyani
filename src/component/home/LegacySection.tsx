@@ -66,9 +66,12 @@ const LegacySection = () => {
               <div className="w-12 h-px bg-zinc-200" />
 
               <p className="font-body text-zinc-600 text-lg md:text-xl leading-relaxed max-w-md font-medium">
-                Built on years of real kitchen experience, Namma Biryani carries
+                {/* Built on years of real kitchen experience, Namma Biryani carries
                 forward the same commitment to quality, now with a clear focus
-                on honest food and consistency.
+                on honest food and consistency. */}
+                Built on years of real kitchen experience, Namma Biryani carries forward
+                the same commitment to quality, earning its name for chicken biryani in
+                Madurai, with a clear focus on honest food and consistency.
               </p>
             </div>
           </div>

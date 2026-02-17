@@ -108,8 +108,8 @@ const LocationSection = () => {
                       Location
                     </h4>
                     <p className="text-zinc-700 font-medium text-lg leading-relaxed">
-                      Rasi Towers, Bypass Rd, near Aristo Hospital, below
-                      Domino's Pizza Madurai,
+                      Rasi Towers, Bypass Rd, near Aristo Hospital, below Domino&apos;s
+                      Pizza Madurai,
                       <br />
                       Tamil Nadu 625001.
                     </p>
@@ -141,16 +141,9 @@ const LocationSection = () => {
                     </h4>
                     <div className="space-y-1">
                       {hours.map((item, idx) => (
-                        <div
-                          key={idx}
-                          className="flex justify-between gap-8 py-1"
-                        >
-                          <span className="text-zinc-500 font-medium">
-                            {item.days}
-                          </span>
-                          <span className="text-zinc-900 font-bold">
-                            {item.time}
-                          </span>
+                        <div key={idx} className="flex justify-between gap-8 py-1">
+                          <span className="text-zinc-500 font-medium">{item.days}</span>
+                          <span className="text-zinc-900 font-bold">{item.time}</span>
                         </div>
                       ))}
                     </div>
@@ -180,9 +173,7 @@ const LocationSection = () => {
                     <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 mb-2">
                       Contact
                     </h4>
-                    <p className="text-zinc-900 font-bold text-xl">
-                      +91 98765 43210
-                    </p>
+                    <p className="text-zinc-900 font-bold text-xl">+91 9626 8888 71</p>
                   </div>
                 </div>
               </div>
@@ -190,7 +181,8 @@ const LocationSection = () => {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 mt-12 info-block">
                 <a
-                  href="https://maps.app.goo.gl/7U2HB8BCAqnKdjfA9"
+                  // href="https://maps.app.goo.gl/7U2HB8BCAqnKdjfA9"
+                  href="https://maps.app.goo.gl/iEjResxM8fUXEmeo8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-brown text-white font-bold py-4 px-6 rounded-2xl text-center shadow-lg shadow-brown/20 hover:bg-dark-brown transition-all duration-300 transform hover:-translate-y-1 active:scale-95"
@@ -198,7 +190,7 @@ const LocationSection = () => {
                   Get Directions
                 </a>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919626888871"
                   className="flex-1 bg-white text-zinc-900 font-bold py-4 px-6 rounded-2xl text-center border-2 border-zinc-100 hover:border-brown/30 transition-all duration-300 active:scale-95"
                 >
                   Call Now
@@ -216,13 +208,13 @@ const LocationSection = () => {
           <div className="w-full h-full lg:p-8">
             <div className="w-full h-full rounded-b-[2.5rem] lg:rounded-2xl overflow-hidden shadow-2xl bg-zinc-100 border border-zinc-200">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125763.90995602818!2d78.00434534335939!3d9.9237808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5004a14ad4b%3A0x78103c6ed126d4fa!2sNamma%20Briyani!5e0!3m2!1sen!2sin!4v1770790123153!5m2!1sen!2sin"
+                // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125763.90995602818!2d78.00434534335939!3d9.9237808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5004a14ad4b%3A0x78103c6ed126d4fa!2sNamma%20Briyani!5e0!3m2!1sen!2sin!4v1770790123153!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d245.635453584663!2d78.0933583649668!3d9.920024421499535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1771315127675!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{
                   border: 0,
-                  filter:
-                    "grayscale(1) contrast(1.1) brightness(1.1) opacity(0.9)",
+                  filter: "grayscale(1) contrast(1.1) brightness(1.1) opacity(0.9)",
                 }}
                 allowFullScreen={true}
                 loading="lazy"

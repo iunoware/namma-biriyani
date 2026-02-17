@@ -11,7 +11,7 @@ if (typeof window !== "undefined") {
 
 const ContactSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const formRef = useRef<HTMLFormElement>(null);
+  // const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
 
   useGSAP(
@@ -93,23 +93,23 @@ const ContactSection = () => {
     e.preventDefault();
     setStatus("loading");
     // Simulate API call
-    setTimeout(() => {
-      setStatus("success");
-    }, 2000);
+    // setTimeout(() => {
+    //   setStatus("success");
+    // }, 2000);
   };
 
   return (
     <section
       ref={sectionRef}
       id="contact"
-      className="relative w-full min-h-screen flex flex-col md:flex-row bg-[#FAF7F2] overflow-hidden py-20 md:py-20"
+      className="relative w-full min-h-screen flex flex-col lg:flex-row gap-20 lg:gap-2 bg-[#FAF7F2] overflow-hidden py-20 md:py-20"
     >
       {/* Decorative Background Elements */}
-      <div className="bg-element absolute top-[-10%] right-[-5%] w-96 h-96 bg-brown/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="bg-element absolute bottom-[-10%] left-[-5%] w-125 h-125 bg-dark-brown/5 rounded-full blur-[120px] pointer-events-none" />
+      {/* <div className="bg-element absolute top-[-10%] right-[-5%] w-96 h-96 bg-brown/5 rounded-full blur-[100px] pointer-events-none" /> */}
+      {/* <div className="bg-element absolute bottom-[-10%] left-[-5%] w-125 h-125 bg-dark-brown/5 rounded-full blur-[120px] pointer-events-none" /> */}
 
       {/* Left Side: Typography Driven Content */}
-      <div className="md:w-[55%] w-full px-6 md:px-24 flex flex-col justify-center relative z-10">
+      <div className="lg:w-[55%] w-full px-6 md:px-24 flex flex-col justify-center relative z-10">
         <div className="relative mb-6">
           <span className="accent-text font-accent text-4xl md:text-3xl text-brown mb-4 block origin-left">
             Vanakkam
@@ -119,22 +119,22 @@ const ContactSection = () => {
           </h2>
         </div>
 
-        <p className="contact-subtext mt-10 text-xl text-gray-700 max-w-lg font-body leading-relaxed">
-          From grand celebrations to intimate cravings, we bring the heart of
-          traditional Biryani to your table.
+        <p className="contact-subtext mt-10 text-xl text-black max-w-lg font-body leading-relaxed">
+          From grand celebrations to intimate cravings, we bring the heart of traditional
+          Biryani to your table.
         </p>
 
-        <div className="mt-16 flex flex-col md:flex-row gap-8  contact-subtext">
+        <div className="mt-16 flex flex-col gap-8  contact-subtext">
           <div className="group cursor-pointer">
             <span className="block text-xs uppercase tracking-[0.2em] text-gray-400 mb-2 font-body font-semibold">
               Bulk Orders & Catering
             </span>
             <div className="flex  items-center gap-3">
               <a
-                href="tel+919876543210"
+                href="tel:+919626888871"
                 className="text-xl font-heading text-dark-brown group-hover:text-brown transition-colors duration-300 underline underline-offset-8 decoration-gray-200 group-hover:decoration-brown"
               >
-                +91 98765 43210
+                +91 9626 8888 71
               </a>
             </div>
           </div>
@@ -146,10 +146,10 @@ const ContactSection = () => {
             <div className="flex items-center gap-3">
               <a
                 target="_blank"
-                href="mailto:hello@nammabiryani.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=nammabriyanibyepass@gmail.com"
                 className="text-2xl font-heading text-dark-brown group-hover:text-brown transition-colors duration-300 underline underline-offset-8 decoration-gray-200 group-hover:decoration-brown"
               >
-                hello@nammabiryani.com
+                nammabriyanibyepass@gmail.com
               </a>
             </div>
           </div>
@@ -157,9 +157,10 @@ const ContactSection = () => {
       </div>
 
       {/* Right Side: Floating Form */}
-      <div className="md:w-[40%] w-full px-6 md:px-12 flex items-center justify-center relative z-20 mt-16 md:mt-0">
+      <div className="lg:w-[40%] w-full px-6 md:px-12 flex items-center justify-center relative z-20 mt-16 md:mt-0">
         <div className="form-container relative w-full max-w-md p-8 md:p-12 bg-white rounded-[2.5rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.08)] border border-gray-100/50">
           {status === "success" ? (
+            // enquiry success message
             <div className="flex flex-col items-center text-center py-12">
               <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
                 <svg
@@ -176,26 +177,23 @@ const ContactSection = () => {
                   />
                 </svg>
               </div>
-              <h3 className="font-heading text-4xl text-dark-brown">
-                All Done!
-              </h3>
+              <h3 className="font-heading text-4xl text-dark-brown">All Done!</h3>
               <p className="text-gray-600 mt-4 text-lg font-body">
-                We&apos;ve received your request. Expect a call while the spices
-                are still fresh.
+                We&apos;ve received your request. Expect a call while the spices are still
+                fresh.
               </p>
               <button
                 onClick={() => setStatus("idle")}
-                className="mt-10 px-8 py-3 rounded-full border border-gray-200 text-gray-500 hover:text-dark-brown hover:border-dark-brown transition-all font-body font-medium"
+                className="mt-10 px-8 py-3 cursor-pointer rounded-full border border-gray-200 text-gray-500 hover:text-dark-brown hover:border-dark-brown transition-all font-body font-medium"
               >
                 Send another enquiry
               </button>
             </div>
           ) : (
+            // enquiry form
             <>
               <div className="mb-12">
-                <h3 className="font-heading text-4xl text-dark-brown">
-                  Say Hello
-                </h3>
+                <h3 className="font-heading text-4xl text-dark-brown">Say Hello</h3>
                 <p className="text-gray-500 font-body mt-2">
                   Tell us what you have in mind.
                 </p>
@@ -206,7 +204,7 @@ const ContactSection = () => {
                   <input
                     type="text"
                     required
-                    placeholder=" "
+                    placeholder=""
                     className="peer block w-full bg-transparent border-b border-gray-200 py-3 text-lg font-body focus:outline-none focus:border-brown transition-all duration-300"
                   />
                   <label className="absolute left-0 top-3 text-gray-400 font-body transition-all duration-300 pointer-events-none peer-placeholder-shown:text-lg peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-brown peer-focus:font-semibold peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-400 capitalize">
@@ -242,15 +240,27 @@ const ContactSection = () => {
                 </div>
 
                 <div className="form-field pt-2">
-                  <button
+                  {/* new button */}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://wa.me/919626888871?text=Hi%20Praveen!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20potential%20project%20or%20collaboration."
+                    className="group flex justify-center items-center cursor-pointer relative w-full h-16 bg-dark-brown text-white rounded-2xl font-heading text-xl overflow-hidden transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_20px_40px_-10px_rgba(170,5,3,0.3)] hover:shadow-[0_20px_40px_-5px_rgba(170,5,3,0.4)]"
+                  >
+                    Send Enquiry
+                  </a>
+
+                  {/* old loading button */}
+                  {/* <button
                     disabled={status === "loading"}
-                    className="group relative w-full h-16 bg-dark-brown text-white rounded-2xl font-heading text-xl overflow-hidden transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_20px_40px_-10px_rgba(170,5,3,0.3)] hover:shadow-[0_20px_40px_-5px_rgba(170,5,3,0.4)]"
+                    className="group cursor-pointer relative w-full h-16 bg-dark-brown text-white rounded-2xl font-heading text-xl overflow-hidden transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_20px_40px_-10px_rgba(170,5,3,0.3)] hover:shadow-[0_20px_40px_-5px_rgba(170,5,3,0.4)]"
                   >
                     <span
-                      className={`flex items-center justify-center gap-3 transition-all duration-500 ${status === "loading"
-                        ? "-translate-y-full opacity-0"
-                        : "translate-y-0 opacity-100"
-                        }`}
+                      className={`flex items-center justify-center gap-3 transition-all duration-500 ${
+                        status === "loading"
+                          ? "-translate-y-full opacity-0"
+                          : "translate-y-0 opacity-100"
+                      }`}
                     >
                       Send Enquiry
                       <svg
@@ -268,14 +278,15 @@ const ContactSection = () => {
                       </svg>
                     </span>
                     <span
-                      className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${status === "loading"
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-full opacity-0"
-                        }`}
+                      className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
+                        status === "loading"
+                          ? "translate-y-0 opacity-100"
+                          : "translate-y-full opacity-0"
+                      }`}
                     >
                       <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                     </span>
-                  </button>
+                  </button> */}
                 </div>
               </form>
             </>

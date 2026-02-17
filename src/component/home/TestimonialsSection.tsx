@@ -16,12 +16,12 @@ const testimonials = [
   },
   {
     rating: 5,
-    text: "I recently visited this traditional Namma Biriyani hotel and it was an absolutely delightful experience. The aroma of freshly cooked biriyani greeted me the moment I entered and the taste truly lived up to the expectation.....",
+    text: "I recently visited this traditional Namma Biryani hotel and it was an absolutely delightful experience. The aroma of freshly cooked biryani greeted me the moment I entered and the taste truly lived up to the expectation.....",
     author: "Ram Harish S R",
   },
   {
     rating: 5,
-    text: "Best non veg hotel to eat in Bypass madurai with traditional and authentic tastes, the aroma makes your mouth watery. The food was genuinely delicious and the perfect portion. We ate Mutton biriyani, Ginger Chicken, Suvarotti and Kola enjoyed it. The prices were reasonable and the establishment was clean...",
+    text: "Best non veg hotel to eat in Bypass madurai with traditional and authentic tastes, the aroma makes your mouth watery. The food was genuinely delicious and the perfect portion. We ate Mutton biryani, Ginger Chicken, Suvarotti and Kola enjoyed it. The prices were reasonable and the establishment was clean...",
     author: "Selvaedwin kumar",
   },
 ];
@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
         {/* Testimonials Grid */}
         <div
           ref={containerRef}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
         >
           {testimonials.map((item, index) => (
             <div

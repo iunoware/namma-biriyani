@@ -12,7 +12,8 @@ const features = [
   {
     title: "Rooted in Tradition",
     description:
-      "From seeraga samba biriyanis to classic curries, every dish is made with time-honoured recipes and bold, honest spices.",
+      // "From seeraga samba biryani to classic curries, every dish is made with time-honoured recipes and bold, honest spices.",
+      "From seeraga samba biryani to classic curries, every dish reflects the bold, honest flavours found at the best biryani restaurants in Madurai.",
     icon: (
       <svg
         className="w-10 h-10 text-white"
@@ -54,7 +55,8 @@ const features = [
   {
     title: "One Place, Many Cravings",
     description:
-      "Biriyanis, Chinese, tandoori, parottas, North Indian favourites — we are the top multi cuisine restaurant in Madurai for every craving.",
+      // "Biryani, Chinese, tandoori, parottas, North Indian favourites — we are the top multi cuisine restaurant in Madurai for every craving.",
+      "Biryani, Chinese, tandoori, parottas, North Indian favourites — it’s why we’re counted among the best restaurants in Madurai for every craving.",
     icon: (
       <svg
         className="w-10 h-10 text-white"
@@ -128,16 +130,14 @@ const WhyChooseUsSection = () => {
         {/* Feature Grid */}
         <div
           ref={containerRef}
-          className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20 mt-15 place-items-center"
         >
           {features.map((feature, index) => (
             <div
               key={index}
               className={`flex hover:scale-105! z-10 flex-col transition-all duration-400 bg-white/40 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_6px_3px_rgba(255,255,255,0.3)] backdrop-blur-xs rounded-2xl p-10 h-fit items-center text-center ${index === 1 ? "md:translate-y-24!" : ""}`}
             >
-              <div className="mb-8 mt-5 p-4 rounded-2xl bg-brown">
-                {feature.icon}
-              </div>
+              <div className="mb-8 mt-5 p-4 rounded-2xl bg-brown">{feature.icon}</div>
               <h3 className="text-2xl font-heading font-bold text-zinc-900 mb-4">
                 {feature.title}
               </h3>
