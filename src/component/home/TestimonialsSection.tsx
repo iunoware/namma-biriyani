@@ -16,7 +16,7 @@ const testimonials = [
   },
   {
     rating: 5,
-    text: "I recently visited this traditional Namma Biryani hotel and it was an absolutely delightful experience. The aroma of freshly cooked biryani greeted me the moment I entered and the taste truly lived up to the expectation.....",
+    text: "I recently visited this traditional Namma Briyani hotel and it was an absolutely delightful experience. The aroma of freshly cooked biryani greeted me the moment I entered and the taste truly lived up to the expectation.....",
     author: "Ram Harish S R",
   },
   {

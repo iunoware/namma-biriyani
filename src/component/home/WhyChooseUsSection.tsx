@@ -13,7 +13,7 @@ const features = [
     title: "Rooted in Tradition",
     description:
       // "From seeraga samba biryani to classic curries, every dish is made with time-honoured recipes and bold, honest spices.",
-      "From seeraga samba biryani to classic curries, every dish reflects the bold, honest flavours found at the best biryani restaurants in Madurai.",
+      "From seeraga samba briyani to classic curries, every dish reflects the bold, honest flavours found at the best biryani restaurants in Madurai.",
     icon: (
       <svg
         className="w-10 h-10 text-white"

@@ -13,6 +13,11 @@ const ContactSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   // const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  // form section:
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   useGSAP(
     () => {
@@ -89,6 +94,38 @@ const ContactSection = () => {
     { scope: sectionRef },
   );
 
+  function inputCheck(e: React.MouseEvent) {
+    const errorMessage = document.getElementById("errorMessage");
+
+    if (name.trim() === "") {
+      e.preventDefault();
+      setError("Kindly enter your name");
+      errorMessage!.style.display = "block";
+      return;
+    }
+
+    if (phone.trim() === "") {
+      e.preventDefault();
+      setError("Kindly enter your phone number");
+      errorMessage!.style.display = "block";
+      return;
+    }
+
+    if (message.trim() === "") {
+      e.preventDefault();
+      setError("Kindly enter your message");
+      errorMessage!.style.display = "block";
+      return;
+    }
+
+    setError("");
+  }
+
+  function whatsappLink() {
+    if (!name || !phone || !message) return;
+    return `https://wa.me/919626888871?text=Hi%20Namma%20Briyani,%0A%0AName: ${name.trim()}%0APhone: ${phone.trim()}%0AMessage: ${message.trim()}`;
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
@@ -121,7 +158,7 @@ const ContactSection = () => {
 
         <p className="contact-subtext mt-10 text-xl text-black max-w-lg font-body leading-relaxed">
           From grand celebrations to intimate cravings, we bring the heart of traditional
-          Biryani to your table.
+          Briyani to your table.
         </p>
 
         <div className="mt-16 flex flex-col gap-8  contact-subtext">
@@ -205,6 +242,7 @@ const ContactSection = () => {
                     type="text"
                     required
                     placeholder=""
+                    onChange={(e) => setName(e.target.value)}
                     className="peer block w-full bg-transparent border-b border-gray-200 py-3 text-lg font-body focus:outline-none focus:border-brown transition-all duration-300"
                   />
                   <label className="absolute left-0 top-3 text-gray-400 font-body transition-all duration-300 pointer-events-none peer-placeholder-shown:text-lg peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-brown peer-focus:font-semibold peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-400 capitalize">
@@ -217,7 +255,8 @@ const ContactSection = () => {
                   <input
                     type="tel"
                     required
-                    placeholder=" "
+                    placeholder=""
+                    onChange={(e) => setPhone(e.target.value)}
                     className="peer block w-full bg-transparent border-b border-gray-200 py-3 text-lg font-body focus:outline-none focus:border-brown transition-all duration-300"
                   />
                   <label className="absolute left-0 top-3 text-gray-400 font-body transition-all duration-300 pointer-events-none peer-placeholder-shown:text-lg peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-brown peer-focus:font-semibold peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-400">
@@ -230,7 +269,8 @@ const ContactSection = () => {
                   <textarea
                     rows={3}
                     required
-                    placeholder=" "
+                    placeholder=""
+                    onChange={(e) => setMessage(e.target.value)}
                     className="peer block w-full bg-transparent border-b border-gray-200 py-3 text-lg font-body focus:outline-none focus:border-brown transition-all duration-300 resize-none"
                   />
                   <label className="absolute left-0 top-3 text-gray-400 font-body transition-all duration-300 pointer-events-none peer-placeholder-shown:text-lg peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-brown peer-focus:font-semibold peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-400">
@@ -239,12 +279,20 @@ const ContactSection = () => {
                   <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-brown transition-all duration-500 group-focus-within:w-full" />
                 </div>
 
+                <h2
+                  id="errorMessage"
+                  className="text-2xl text-center text-red-500 font-bold hidden"
+                >
+                  {error}
+                </h2>
+
                 <div className="form-field pt-2">
                   {/* new button */}
                   <a
                     target="_blank"
+                    href={whatsappLink()}
+                    onClick={inputCheck}
                     rel="noopener noreferrer"
-                    href="https://wa.me/919626888871?text=Hi%20Praveen!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20potential%20project%20or%20collaboration."
                     className="group flex justify-center items-center cursor-pointer relative w-full h-16 bg-dark-brown text-white rounded-2xl font-heading text-xl overflow-hidden transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_20px_40px_-10px_rgba(170,5,3,0.3)] hover:shadow-[0_20px_40px_-5px_rgba(170,5,3,0.4)]"
                   >
                     Send Enquiry
