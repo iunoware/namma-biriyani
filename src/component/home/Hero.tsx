@@ -141,13 +141,13 @@ const Hero = () => {
             ref={eyebrowRef}
             className="text-xl overflow-hidden font-accent text-white mb-4"
           >
-            Authentic Traditional Biryani
+            Authentic Traditional Briyani
           </p>
           <h1
             ref={headRef}
             className="text-[6rem] text-center z-10 tracking-tighter font-bold text-white leading-none"
           >
-            Namma <span className="text-dark-brown"> Biryani</span>
+            Namma <span className="text-dark-brown"> Briyani</span>
           </h1>
         </div>
 
@@ -182,13 +182,13 @@ const Hero = () => {
 
           <h1 className="font-heading text-5xl xs:text-6xl font-black text-white tracking-tighter leading-[0.9] mb-6">
             Namma <br />
-            <span className="text-brown">Biryani</span>
+            <span className="text-brown">Briyani</span>
           </h1>
 
           <p className="font-body text-zinc-300 text-base leading-relaxed mb-10">
-            Biryani Right Here in Madurai — a focused expression of everything
+            Briyani Right Here in Madurai — a focused expression of everything
             we’ve learned. Crafted with passion, rooted in tradition. Discover
-            the best biryani in Madurai for lunch or dinner.
+            the best briyani in Madurai for lunch or dinner.
           </p>
 
           <button

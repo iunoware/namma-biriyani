@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -105,15 +105,20 @@ export default function Interiors() {
             <div className="w-12 h-px bg-brand-red mx-auto mb-8"></div>
 
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-heading text-black leading-tight mb-10">
-              The Biriyani We’re <br />
+              The Biryani We’re <br />
               <span className="italic text-dark-brown">Known For</span>
             </h2>
 
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed max-w-lg mx-auto mb-12">
-              Slow-cooked with fragrant seeraga samba rice, layered spices, and
+              {/* Slow-cooked with fragrant seeraga samba rice, layered spices, and
               traditional techniques, our biryani is rich, aromatic, and deeply
-              satisfying. Cooked in classic copper vessels and served hot — this
-              is the best biryani in Madurai for lunch or dinner.
+              satisfying. Cooked in classic copper vessels and served hot — this is the
+              best biryani in Madurai for lunch or dinner. */}
+              Slow-cooked with fragrant seeraga samba rice, layered spices, and
+              traditional techniques, our briyani is rich, aromatic, and deeply
+              satisfying. Cooked in classic copper vessels and served hot — it’s why Namma
+              Briyani is counted among the best briyani restaurants in Madurai for lunch
+              or dinner.
             </p>
 
             <div className="relative group inline-block">
@@ -122,7 +127,7 @@ export default function Interiors() {
                 target="_blank"
                 className=" font-heading cursor-pointer text-[13px] font-semibold tracking-widest uppercase text-black group-hover:text-brown transition-colors duration-300"
               >
-                View Biryani Menu
+                View Briyani Menu
               </a>
               <div className="absolute -bottom-1 left-0 w-full h-px bg-brown group-hover:bg-dark-brown scale-x-100 group-hover:scale-x-110 transition-all duration-300"></div>
             </div>

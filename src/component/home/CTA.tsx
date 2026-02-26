@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import gsap from "gsap";
@@ -83,7 +84,7 @@ const CTA = () => {
       <div className="flex justify-center">
         <img
           src="/images/biryani-1.png"
-          alt="Chicken Biryani in Madurai - Namma Biryani"
+          alt="Chicken Biryani in Madurai - Namma Briyani"
           className="md:-translate-y-10 form-container md:h-90 w-auto object-center object-cover"
         />
       </div>

@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { HtmlContext } from "next/dist/server/route-modules/pages/vendored/contexts/entrypoints";
+// import { HtmlContext } from "next/dist/server/route-modules/pages/vendored/contexts/entrypoints";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -14,7 +14,7 @@ if (typeof window !== "undefined") {
 const CuisineIntroSplit = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageContainerRef = useRef<HTMLDivElement>(null);
-  const summaRef = useRef<HTMLDivElement>(null);
+  // const summaRef = useRef<HTMLDivElement>(null);
 
   function smoothScroll(href: string) {
     const section = document.getElementById(href);
@@ -90,14 +90,23 @@ const CuisineIntroSplit = () => {
             </h2>
 
             <p className="cuisine-reveal font-body mt-8 text-lg leading-relaxed text-zinc-600 md:text-xl md:leading-loose text-balance">
-              From iconic biriyanis layered with bold spices to sizzling
-              tandoors fresh off the grill, our kitchen is all about flavour
-              that hits right. Every dish is crafted with care, rich aromas, and
-              the comfort you keep coming back for.
+              {/* From iconic biriyanis layered with bold spices to sizzling tandoors fresh
+              off the grill, our kitchen is all about flavour that hits right. Every dish
+              is crafted with care, rich aromas, and the comfort you keep coming back for. */}
+              From iconic briyani layered with bold spices to sizzling tandoors fresh
+              off the grill, <strong>Namma Briyani</strong> is proud to be known as one of
+              the <strong>best briyani restaurants in Madurai</strong>. Every plate — from
+              our signature <strong>Chicken Dum Briyani in Madurai</strong> to slow-cooked
+              specialities — is crafted with care, rich aromas, and the comfort you keep
+              coming back for.
             </p>
             <p className="cuisine-reveal font-body mt-8 text-lg leading-relaxed text-zinc-600 md:text-xl md:leading-loose text-balance">
-              From comforting Chinese favourites and flaky parottas to hearty
-              North Indian curries, everything is cooked fresh every day — hot,
+              {/* From comforting Chinese favourites and flaky parottas to hearty North Indian
+              curries, everything is cooked fresh every day — hot, generous, and full of
+              character. */}
+              From comforting Chinese favourites and flaky parottas to hearty North Indian
+              curries, we serve flavours perfect for a{" "}
+              <strong> non-veg family restaurant</strong> — cooked fresh every day, hot,
               generous, and full of character.
             </p>
 
@@ -135,7 +144,7 @@ const CuisineIntroSplit = () => {
             <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl shadow-2xl shadow-brown/10 lg:aspect-3/4">
               <Image
                 src="/images/restaurant_cuisine_spread_1770293763835.png"
-                alt="Hyderabadi Chicken Biryani Near Me - Signature Flavors"
+                alt="Hyderabadi Chicken briyani Near Me - Signature Flavors"
                 fill
                 className="object-cover transition-transform duration-1000 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
