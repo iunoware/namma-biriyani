@@ -70,11 +70,11 @@ const CTA = () => {
   return (
     <div
       ref={sectionRef}
-      className="min-h-screen pb-20 bg-element relative bg-[url(/images/cta-bg.jpeg)] bg-cover bg-center w-full flex flex-col items-center justify-center bg-dark-brown overflow-hidden"
+      className="min-h-screen pb-20 bg-element relative bg-[url(/images/best-biryani-restaurants-in-madurai.jpeg)] bg-cover bg-center w-full flex flex-col items-center justify-center bg-dark-brown overflow-hidden"
     >
       <div className="pt-20 flex flex-col items-center justify-center">
         <p className="text-center accent-text text-3xl font-accent text-dark-brown font-bold">
-          Bulk Orders
+          Bulk Biryani Orders
         </p>
         <h3 className="md:text-8xl contact-heading text-5xl  tracking-tighter text-white text-center font-bold">
           Food For <br />
@@ -83,7 +83,7 @@ const CTA = () => {
       </div>
       <div className="flex justify-center">
         <img
-          src="/images/biryani-1.png"
+          src="/images/best-biryani-in-madurai.png"
           alt="Chicken Biryani in Madurai - Namma Briyani"
           className="md:-translate-y-10 form-container md:h-90 w-auto object-center object-cover"
         />

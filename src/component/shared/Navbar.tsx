@@ -149,7 +149,7 @@ export default function Navbar() {
           <div ref={logoRef} className="shrink-0">
             <Link href="/">
               <Image
-                src="/images/pot-1.png"
+                src="/images/madurai-chettinadu-south-indian-restaurant.png"
                 alt="Ambience and table setting at Chopstix"
                 width={140}
                 height={60}

@@ -119,7 +119,7 @@ const Footer = () => {
               className="inline-block transform transition-transform hover:scale-105 duration-300 cursor-pointer"
             >
               <Image
-                src="/images/pot-1.png"
+                src="/images/madurai-chettinadu-south-indian-restaurant.png"
                 alt="Namma Briyani Logo"
                 width={160}
                 height={70}
@@ -127,8 +127,10 @@ const Footer = () => {
               />
             </div>
             <p className="text-white text-md leading-relaxed font-medium tracking-tight">
-              Savour the <span className="text-white italic">authentic essence</span> of
-              tradition in every grain. Authentic Madurai flavours, crafted with passion.
+              Savour the{" "}
+              <span className="text-white italic">authentic essence</span> of
+              tradition in every grain. Authentic Madurai flavours, crafted with
+              passion.
             </p>
           </div>
 

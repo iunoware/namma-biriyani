@@ -55,8 +55,7 @@ const features = [
   {
     title: "One Place, Many Cravings",
     description:
-      // "Biryani, Chinese, tandoori, parottas, North Indian favourites — we are the top multi cuisine restaurant in Madurai for every craving.",
-      "Biryani, Chinese, tandoori, parottas, North Indian favourites — it’s why we’re counted among the best restaurants in Madurai for every craving.",
+      "Biryani, Chinese, tandoori, parottas, North Indian classics — as a multi cuisine restaurant in Madurai, we're among the best restaurants in Madurai for every craving and occasion.",
     icon: (
       <svg
         className="w-10 h-10 text-white"
@@ -113,7 +112,7 @@ const WhyChooseUsSection = () => {
     <section
       ref={sectionRef}
       id="why-choose-us"
-      className="py-20 md:py-32 bg-[url('/images/mob-bg.png')] md:bg-[url('/images/bg.jpg')] bg-center bg-cover overflow-hidden"
+      className="py-20 md:py-32 bg-[url('/images/chettinadu-special-restaurant.png')] md:bg-[url('/images/best-biryani-restaurant-in-madurai.jpg')] bg-center bg-cover overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
@@ -137,7 +136,9 @@ const WhyChooseUsSection = () => {
               key={index}
               className={`flex hover:scale-105! z-10 flex-col transition-all duration-400 bg-white/40 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_6px_3px_rgba(255,255,255,0.3)] backdrop-blur-xs rounded-2xl p-10 h-fit items-center text-center ${index === 1 ? "md:translate-y-24!" : ""}`}
             >
-              <div className="mb-8 mt-5 p-4 rounded-2xl bg-brown">{feature.icon}</div>
+              <div className="mb-8 mt-5 p-4 rounded-2xl bg-brown">
+                {feature.icon}
+              </div>
               <h3 className="text-2xl font-heading font-bold text-zinc-900 mb-4">
                 {feature.title}
               </h3>

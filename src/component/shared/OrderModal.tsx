@@ -125,10 +125,10 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 md:gap-6">
+          <div className="grid">
             {/* Swiggy Button */}
             <a
-              href="https://www.swiggy.com/city/madurai/the-irish-cafe-alavandan-kk-nagar-rest790606"
+              href="https://www.swiggy.com/city/madurai/namma-briyani-byepass-ponmeni-periyar-rest1276312"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex flex-col items-center justify-center p-6 md:p-8 rounded-2xl border border-zinc-100 bg-white/30 backdrop-blur-3xl hover:bg-zinc-50 hover:border-orange-500/20 hover:shadow-lg transition-all duration-500 animate-fade-in"
@@ -151,7 +151,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
             </a>
 
             {/* Zomato Button */}
-            <a
+            {/* <a
               href="https://www.zomato.com/madurai/the-irish-cafe-kk-nagar"
               target="_blank"
               rel="noopener noreferrer"
@@ -176,7 +176,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
               <span className="text-sm font-medium text-zinc-800 group-hover:text-red-600 transition-colors tracking-wide">
                 Zomato
               </span>
-            </a>
+            </a> */}
           </div>
 
           <div className="text-center space-y-8">

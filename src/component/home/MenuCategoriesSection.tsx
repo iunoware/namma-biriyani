@@ -14,33 +14,33 @@ if (typeof window !== "undefined") {
 const categories = [
   {
     title: "Briyani",
-    hint: "Best chicken briyani in Madurai with signature seeraga samba & basmati specials",
+    hint: "Chicken Dum Biryani, Mutton varieties & seeraga samba specials. Find the best biryani restaurants in Madurai here.",
     href: "/menu#biriyanis",
-    image: "/images/DSC01788.JPG",
+    image: "/images/biryani-delivery-madurai.JPG",
   },
   {
     title: "Chinese",
     hint: "Wok-fried classics & appetizers",
     href: "/menu#chinese",
-    image: "/images/chinese.jpg",
+    image: "/images/biryani-restaurants-in-madurai.jpg",
   },
   {
     title: "Tandoori & Tikkas",
-    hint: "Clay-oven roasted smoky delights",
+    hint: "Clay-oven roasted delights. Premium non-veg offerings from our tandoor.",
     href: "/menu#tandoori",
-    image: "/images/tandooro.jpg",
+    image: "/images/best-nonveg-family-chettinad-restaurant.jpg",
   },
   {
     title: "Parottas & South Indian",
     hint: "Flaky parottas & regional favorites",
     href: "/menu#south-indian",
-    image: "/images/parota.jfif",
+    image: "/images/best-parota-in-madurai.jfif",
   },
   {
     title: "Bucket Briyani's",
-    hint: "Perfect for family gatherings",
+    hint: "Best bucket biryani in Madurai for gatherings & celebrations",
     href: "/menu#buckets",
-    image: "/images/bucket.png",
+    image: "/images/chicken-biryani-in-madurai.png",
   },
 ];
 
@@ -114,7 +114,10 @@ const MenuCategoriesSection = () => {
         </div>
       </div>
 
-      <div ref={cardsRef} className="flex md:flex-row flex-col gap-4 w-full px-6">
+      <div
+        ref={cardsRef}
+        className="flex md:flex-row flex-col gap-4 w-full px-6"
+      >
         {categories.map((category, index) => {
           const isActive = activeIndex === index;
 

@@ -47,7 +47,7 @@ const Menu = () => {
         >
           <img
             src="/images/menu.png"
-            alt="menu"
+            alt="Namma Biryani Menu - Best Biryani Restaurant in Madurai with Chicken Dum, Mutton and Bucket Biryani"
             className="object-center md:h-150 h-100 w-auto object-cover"
           />
         </a>
