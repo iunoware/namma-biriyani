@@ -164,7 +164,7 @@ const Hero = () => {
         {/* Mobile Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/biryani-1.png"
+            src="/images/best-biryani-in-madurai.png"
             alt="Best Chicken Biryani in Madurai - Namma Biryani"
             fill
             className="object-cover opacity-60"
@@ -186,7 +186,9 @@ const Hero = () => {
           </h1>
 
           <p className="font-body text-zinc-300 text-base leading-relaxed mb-10">
-            Premium biryani right here in Madurai — expertly crafted with passion, rooted in tradition. Discover the best biryani in Madurai for lunch or dinner, and order online today.
+            Premium biryani right here in Madurai — expertly crafted with
+            passion, rooted in tradition. Discover the best biryani in Madurai
+            for lunch or dinner, and order online today.
           </p>
 
           <button
