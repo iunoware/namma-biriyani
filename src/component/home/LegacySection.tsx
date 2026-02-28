@@ -69,9 +69,10 @@ const LegacySection = () => {
                 {/* Built on years of real kitchen experience, Namma Biryani carries
                 forward the same commitment to quality, now with a clear focus
                 on honest food and consistency. */}
-                Built on years of real kitchen experience, Namma Briyani carries forward
-                the same commitment to quality, earning its name for chicken briyani in
-                Madurai, with a clear focus on honest food and consistency.
+                Built on years of real kitchen experience, Namma Briyani carries
+                forward the same commitment to quality, earning its name for
+                chicken briyani in Madurai, with a clear focus on honest food
+                and consistency.
               </p>
             </div>
           </div>
@@ -87,7 +88,7 @@ const LegacySection = () => {
 
               <div className="relative">
                 <Image
-                  src="/images/logo-2.png"
+                  src="/images/best-biryani-in-madurai-for-lunch.png"
                   alt="Madurai Chettinadu South Indian Restaurant Heritage"
                   width={300}
                   height={150}

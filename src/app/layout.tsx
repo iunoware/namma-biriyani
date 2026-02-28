@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Source_Sans_3, Marck_Script } from "next/font/google";
+import {
+  Playfair_Display,
+  Source_Sans_3,
+  Marck_Script,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/shared/Navbar";
 import Footer from "@/component/shared/Footer";
 
 export const metadata: Metadata = {
-  title: "Best Biryani in Madurai - Namma Briyani",
+  title: "Best Biryani Restaurant in Madurai | Namma Briyani Restaurant",
   description:
-    "Experience the Best Biryani in Madurai at Namma Biryani. From authentic Chicken Biryani in Madurai to our famous Bucket Biryani Madurai, discover the top-rated Multi Cuisine Restaurant in Madurai.",
+    "Namma Briyani Restaurant serves authentic Chicken Dum Biryani in Madurai. Dine in with family or order online for fast biryani delivery across Madurai.",
   icons: {
     icon: {
       // media: "(prefers-color-scheme: light)",
@@ -15,6 +19,8 @@ export const metadata: Metadata = {
       href: "/images/apple-touch-icon.png",
     },
   },
+  // canonical tag
+  metadataBase: new URL("https://nammabriyani.com"),
 };
 
 // Playfair Display – headings for a more premium look

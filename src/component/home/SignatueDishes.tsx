@@ -86,7 +86,7 @@ export default function Interiors() {
             className="w-full rounded-2xl lg:w-1/4 h-100 lg:h-110 relative order-2 lg:order-1 lg:mt-24 shadow-2xl overflow-hidden group"
           >
             <Image
-              src="/images/biryani-2.jpg"
+              src="/images/best-chicken-biryani-in-madurai.jpg"
               alt="Best Chicken Biryani in Madurai"
               fill
               className="object-cover rounded-2xl grayscale-0 hover:grayscale transition-all duration-1000 scale-105 group-hover:scale-100"
@@ -110,15 +110,7 @@ export default function Interiors() {
             </h2>
 
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed max-w-lg mx-auto mb-12">
-              {/* Slow-cooked with fragrant seeraga samba rice, layered spices, and
-              traditional techniques, our biryani is rich, aromatic, and deeply
-              satisfying. Cooked in classic copper vessels and served hot — this is the
-              best biryani in Madurai for lunch or dinner. */}
-              Slow-cooked with fragrant seeraga samba rice, layered spices, and
-              traditional techniques, our briyani is rich, aromatic, and deeply
-              satisfying. Cooked in classic copper vessels and served hot — it’s why Namma
-              Briyani is counted among the best briyani restaurants in Madurai for lunch
-              or dinner.
+              Slow-cooked with fragrant seeraga samba rice and layered spices, our signature Chicken Dum Biryani is prepared using traditional techniques in classic copper vessels. Whether you're looking for the best dum biryani near you or prefer our bucket biryani options for gatherings, every serving reflects authentic Madurai flavours — hot, aromatic, and deeply satisfying for lunch or dinner.
             </p>
 
             <div className="relative group inline-block">
@@ -139,7 +131,7 @@ export default function Interiors() {
             className="w-full rounded-2xl lg:w-1/4 h-100 lg:h-110 relative order-3 lg:mb-24 shadow-2xl overflow-hidden group"
           >
             <Image
-              src="/images/bucket.png"
+              src="/images/chicken-biryani-in-madurai.png"
               alt="Best Bucket Biryani Madurai"
               fill
               className="object-cover rounded-2xl object-left grayscale-0 hover:grayscale transition-all duration-1000 scale-105 group-hover:scale-100"

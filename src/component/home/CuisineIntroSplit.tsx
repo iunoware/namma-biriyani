@@ -101,13 +101,7 @@ const CuisineIntroSplit = () => {
               coming back for.
             </p>
             <p className="cuisine-reveal font-body mt-8 text-lg leading-relaxed text-zinc-600 md:text-xl md:leading-loose text-balance">
-              {/* From comforting Chinese favourites and flaky parottas to hearty North Indian
-              curries, everything is cooked fresh every day — hot, generous, and full of
-              character. */}
-              From comforting Chinese favourites and flaky parottas to hearty North Indian
-              curries, we serve flavours perfect for a{" "}
-              <strong> non-veg family restaurant</strong> — cooked fresh every day, hot,
-              generous, and full of character.
+              From comforting Chinese favourites and flaky parottas to hearty North Indian curries, our Chettinadu Special recipes are a signature of our kitchen. As a premier <strong>Madurai Chettinadu South Indian restaurant</strong>, we serve flavours perfect for families — cooked fresh daily, hot, generous, and authentic.
             </p>
 
             <div className="cuisine-reveal mt-10 md:mt-12">

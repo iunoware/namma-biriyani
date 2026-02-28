@@ -127,7 +127,7 @@ const Hero = () => {
           muted
           playsInline
           preload="auto"
-          poster="/images/hero-fallback.png"
+          poster="/images/mutton-biryani-near-me.png"
           className="w-full h-full object-cover pointer-events-none select-none"
           style={{ willChange: "transform, contents" }}
         />
@@ -137,18 +137,18 @@ const Hero = () => {
 
         {/* Center Content */}
         <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none">
-          <p
-            ref={eyebrowRef}
-            className="text-xl overflow-hidden font-accent text-white mb-4"
-          >
-            Authentic Traditional Briyani
-          </p>
           <h1
+            ref={eyebrowRef}
+            className="text-xl overflow-hidden font-accent! text-white"
+          >
+            The Best Biryani Restaurant in Madurai
+          </h1>
+          <h2
             ref={headRef}
             className="text-[6rem] text-center z-10 tracking-tighter font-bold text-white leading-none"
           >
             Namma <span className="text-dark-brown"> Briyani</span>
-          </h1>
+          </h2>
         </div>
 
         {/* Scroll Indicator */}
@@ -186,16 +186,14 @@ const Hero = () => {
           </h1>
 
           <p className="font-body text-zinc-300 text-base leading-relaxed mb-10">
-            Briyani Right Here in Madurai — a focused expression of everything
-            we’ve learned. Crafted with passion, rooted in tradition. Discover
-            the best briyani in Madurai for lunch or dinner.
+            Premium biryani right here in Madurai — expertly crafted with passion, rooted in tradition. Discover the best biryani in Madurai for lunch or dinner, and order online today.
           </p>
 
           <button
             onClick={() => setIsModalOpen(true)}
             className="w-full bg-white text-black px-10 py-5 rounded-full text-sm font-bold uppercase tracking-widest shadow-2xl active:scale-95 transition-transform flex items-center justify-center gap-3"
           >
-            Order Online
+            Order Online Now
             <svg
               className="w-4 h-4 translate-y-px"
               fill="none"
